@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <EditText
+        android:id="@+id/editTextNombre"
+        android:layout_width="316dp"
+        android:layout_height="75dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="86dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Nombre completo"
+        android:textSize="24sp"
+        android:backgroundTint="@android:color/holo_blue_bright"
+        android:textCursorDrawable="@drawable/color_cursor"/>
+
+    <EditText
+        android:id="@+id/editTextEdad"
+        android:layout_width="316dp"
+        android:layout_height="75dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="197dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Edad"
+        android:textSize="24sp"
+        android:backgroundTint="@android:color/holo_blue_bright"
+        android:textCursorDrawable="@drawable/color_cursor"/>
+
+</RelativeLayout>

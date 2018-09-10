@@ -4,9 +4,8 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher_foreground"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
@@ -21,12 +20,128 @@
         </activity>
         <activity
             android:name=".PerfilActivity"
+            android:label="@string/perfil"
+            android:theme="@style/AppTheme"
+            android:parentActivityName=".Inicio">
+            <intent-filter>
+                <action android:name="PerfilActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ConfiguracionActivity"
+            android:label="@string/configuracion"
+            android:theme="@style/AppTheme"
+            android:parentActivityName=".Inicio">
+            <intent-filter>
+                <action android:name="ConfiguracionActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".RecomendacionesActivity"
+            android:label="@string/recomendaciones"
+            android:theme="@style/AppTheme"
+            android:parentActivityName=".Inicio">
+            <intent-filter>
+                <action android:name="RecomendacionesActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Nivel1Activity"
+            android:label="@string/nivel1"
+            android:theme="@style/AppTheme"
+            android:parentActivityName=".Inicio">
+            <intent-filter>
+                <action android:name="Nivel1Activity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Nivel2Activity"
+            android:label="@string/nivel2"
+            android:theme="@style/AppTheme"
+            android:parentActivityName=".Inicio">
+            <intent-filter>
+                <action android:name="Nivel2Activity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Nivel3Activity"
+            android:label="@string/nivel3"
+            android:theme="@style/AppTheme"
+            android:parentActivityName=".Inicio">
+            <intent-filter>
+                <action android:name="Nivel3Activity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PalabraNivel1"
+            android:label="@string/palabras"
+            android:theme="@style/AppTheme"
+            android:parentActivityName=".Nivel1Activity">
+            <intent-filter>
+                <action android:name="PalabraNivel1" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FinalNivel1"
             android:label="@string/app_name"
             android:theme="@style/AppTheme">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="FinalNivel1" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PalabraNivel2"
+            android:label="@string/palabras"
+            android:theme="@style/AppTheme"
+            android:parentActivityName=".Nivel2Activity">
+            <intent-filter>
+                <action android:name="PalabraNivel2" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FinalNivel2"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="FinalNivel2" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PalabraNivel3"
+            android:label="@string/palabras"
+            android:theme="@style/AppTheme"
+            android:parentActivityName=".Nivel3Activity">
+            <intent-filter>
+                <action android:name="PalabraNivel3" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FinalNivel3"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="FinalNivel3" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TiendaActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="TiendaActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
     </application>

@@ -1,8 +1,19 @@
 <resources>
     <string name="app_name">Pocket Therapy</string>
+
     <string name="inicio">Inicio</string>
     <string name="retos">Retos</string>
     <string name="tienda">Tienda</string>
+
     <string name="perfil">Perfil</string>
-    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="configuracion">Configuración</string>
+    <string name="recomendaciones">Recomendaciones</string>
+
+    <string name="nivel1">Nivel 1</string>
+    <string name="nivel2">Nivel 2</string>
+    <string name="nivel3">Nivel 3</string>
+
+    <string name="palabras">Palabras</string>
+
+    <string name="section_format"></string>
 </resources>

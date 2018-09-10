@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/buttonGuardarConfiguracion"
+        android:layout_width="137dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="169dp"
+        android:text="Guardar"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/btn_guardar"/>
+
+    <SeekBar
+        android:id="@+id/seekBarTamanoLetra"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="303dp"
+        android:layout_height="78dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="202dp"
+        android:animationResolution="@android:integer/status_bar_notification_info_maxnum"
+        android:max="2"
+        android:progress="0"
+        android:thumb="@drawable/thumb_image" />
+
+    <TextView
+        android:id="@+id/textViewConfiguracion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="91dp"
+        android:text="TAMAÑO DE LA FUENTE"
+        android:textSize="16dp" />
+
+</RelativeLayout>

@@ -7,30 +7,43 @@
 
     <EditText
         android:id="@+id/editTextNombre"
-        android:layout_width="316dp"
+        android:layout_width="match_parent"
         android:layout_height="75dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="86dp"
+        android:backgroundTint="@android:color/holo_green_dark"
         android:ems="10"
+        android:textColor="@color/colorPrimary"
         android:inputType="textPersonName"
-        android:text="Nombre completo"
-        android:textSize="24sp"
-        android:backgroundTint="@android:color/holo_blue_bright"
-        android:textCursorDrawable="@drawable/color_cursor"/>
+        android:text=""
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:textSize="24sp" />
 
     <EditText
         android:id="@+id/editTextEdad"
-        android:layout_width="316dp"
+        android:layout_width="match_parent"
         android:layout_height="75dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="197dp"
+        android:backgroundTint="@android:color/holo_green_dark"
         android:ems="10"
+        android:textColor="@color/colorPrimary"
         android:inputType="textPersonName"
-        android:text="Edad"
-        android:textSize="24sp"
-        android:backgroundTint="@android:color/holo_blue_bright"
-        android:textCursorDrawable="@drawable/color_cursor"/>
+        android:text=""
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/buttonGuardarPerfil"
+        android:layout_width="137dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="183dp"
+        android:text="Guardar"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/btn_guardar"/>
 
 </RelativeLayout>

@@ -838,7 +838,7 @@ public class Nivel1Activity  extends AppCompatActivity {
                         Palabra agenda = new Palabra("Agenda", 90, 30, 0, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(agenda);
 
-                        Palabra contador = new Palabra("contador", 90, 30, 0, tienda.getId(), categoria.getId());
+                        Palabra contador = new Palabra("Contador", 90, 30, 0, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(contador);
 
                         Palabra auxiliar = new Palabra("Auxiliar", 90, 30, 0, tienda.getId(), categoria.getId());

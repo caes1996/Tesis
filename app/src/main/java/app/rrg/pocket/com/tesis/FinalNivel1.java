@@ -108,6 +108,102 @@ public class FinalNivel1 extends AppCompatActivity {
             case "Yeso":
                 img.setImageResource(R.drawable.arte_yeso);
                 break;
+            case "Rojo":
+                img.setImageResource(R.drawable.colores_rojo);
+                break;
+            case "Verde":
+                img.setImageResource(R.drawable.colores_verde);
+                break;
+            case "Azul":
+                img.setImageResource(R.drawable.colores_azul);
+                break;
+            case "Amarillo":
+                img.setImageResource(R.drawable.colores_amarillo);
+                break;
+            case "Negro":
+                img.setImageResource(R.drawable.colores_negro);
+                break;
+            case "Blanco":
+                img.setImageResource(R.drawable.colores_blanco);
+                break;
+            case "Gris":
+                img.setImageResource(R.drawable.colores_gris);
+                break;
+            case "Café":
+                img.setImageResource(R.drawable.colores_cafe);
+                break;
+            case "Morado":
+                img.setImageResource(R.drawable.colores_morado);
+                break;
+            case "Rosado":
+                img.setImageResource(R.drawable.colores_rosado);
+                break;
+            case "Salmón":
+                img.setImageResource(R.drawable.colores_salmon);
+                break;
+            case "Durazno":
+                img.setImageResource(R.drawable.colores_durazno);
+                break;
+            case "Fucsia":
+                img.setImageResource(R.drawable.colores_fucsia);
+                break;
+            case "Plateado":
+                img.setImageResource(R.drawable.colores_plateado);
+                break;
+            case "Dorado":
+                img.setImageResource(R.drawable.colores_dorado);
+                break;
+            case "Violeta":
+                img.setImageResource(R.drawable.colores_violeta);
+                break;
+            case "Púrpura":
+                img.setImageResource(R.drawable.colores_violeta);
+                break;
+            case "Hamburguesa":
+                img.setImageResource(R.drawable.comida_hamburguesa);
+                break;
+            case "Salchipapa":
+                img.setImageResource(R.drawable.comida_salchipapa);
+                break;
+            case "Pizza":
+                img.setImageResource(R.drawable.comida_pizza);
+                break;
+            case "Agenda":
+                img.setImageResource(R.drawable.comunicacion_agenda);
+                break;
+            case "Prensa":
+                img.setImageResource(R.drawable.comunicacion_prensa);
+                break;
+            case "Mensaje":
+                img.setImageResource(R.drawable.comunicacion_mensaje);
+                break;
+            case "Opinión":
+                img.setImageResource(R.drawable.comunicacion_opinion);
+                break;
+            case "Reportaje":
+                img.setImageResource(R.drawable.comunicacion_reportaje);
+                break;
+            case "Caja":
+                img.setImageResource(R.drawable.contaduria_caja);
+                break;
+            case "Contable":
+                img.setImageResource(R.drawable.contaduria_contable);
+                break;
+            case "Contador":
+                img.setImageResource(R.drawable.contaduria_contador);
+                break;
+            case "Factura":
+                img.setImageResource(R.drawable.contaduria_factura);
+                break;
+            case "Inventario":
+                img.setImageResource(R.drawable.contaduria_inventario);
+                break;
+            case "Iva":
+                img.setImageResource(R.drawable.contaduria_iva);
+                break;
+            case "Proveedor":
+                img.setImageResource(R.drawable.contaduria_proveedor);
+                break;
 
         }
 

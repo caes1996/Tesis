@@ -23,7 +23,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="scalingPercent" value="74" />
+                                                <entry key="scalingPercent" value="61" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -33,8 +33,10 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="foregroundImage" value="C:\Users\danri\AndroidStudioProjects\Tesis\images\PocketTherapy.png" />
+                                      <entry key="foregroundImage" value="C:\Users\danri\AndroidStudioProjects\Tesis\app\src\main\res\drawable\arte_acuarela.png" />
+                                      <entry key="foregroundLayerName" value="acuarela" />
                                       <entry key="legacyIconShape" value="NONE" />
+                                      <entry key="previewDensity" value="XXXHIGH" />
                                       <entry key="webIconShape" value="NONE" />
                                     </map>
                                   </option>
@@ -44,10 +46,25 @@
                             <entry key="launcherLegacy">
                               <value>
                                 <PersistentState>
+                                  <option name="children">
+                                    <map>
+                                      <entry key="image">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="paddingPercent" value="-10" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                    </map>
+                                  </option>
                                   <option name="values">
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
-                                      <entry key="imageAsset" value="C:\Users\danri\AndroidStudioProjects\Tesis\images\PocketTherapy.png" />
+                                      <entry key="imageAsset" value="C:\Users\danri\AndroidStudioProjects\Tesis\images\Arte\Arte.png" />
                                     </map>
                                   </option>
                                 </PersistentState>

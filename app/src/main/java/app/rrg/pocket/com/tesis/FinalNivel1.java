@@ -8,6 +8,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -58,6 +59,7 @@ public class FinalNivel1 extends AppCompatActivity {
 
     private void configuracion(){
         TextView textView = (TextView) findViewById(R.id.textViewFN1);
+
         textView.setText(palabra.getNombre());
 
         if(usuario.getTamano().equals("pequeno")){
@@ -67,6 +69,48 @@ public class FinalNivel1 extends AppCompatActivity {
         }else{
             textView.setTextSize(44);
         }
+
+        setImg(palabra.getNombre());
+    }
+
+    public void setImg(String palabra){
+
+        ImageView  img = (ImageView) findViewById(R.id.imageViewFinalNivel1);
+
+        switch (palabra){
+            case "Acuarela":
+                img.setImageResource(R.drawable.arte_acuarela);
+                break;
+            case "Arte":
+                img.setImageResource(R.drawable.arte_arte);
+                break;
+            case "Boceto":
+                img.setImageResource(R.drawable.arte_boceto);
+                break;
+            case "Clásico":
+                img.setImageResource(R.drawable.arte_clasico);
+                break;
+            case "Dibujo":
+                img.setImageResource(R.drawable.arte_dibujo);
+                break;
+            case "Estatua":
+                img.setImageResource(R.drawable.arte_estatua);
+                break;
+            case "Lápiz":
+                img.setImageResource(R.drawable.arte_lapiz);
+                break;
+            case "Mural":
+                img.setImageResource(R.drawable.arte_mural);
+                break;
+            case "Plastilina":
+                img.setImageResource(R.drawable.arte_plastilina);
+                break;
+            case "Yeso":
+                img.setImageResource(R.drawable.arte_yeso);
+                break;
+
+        }
+
     }
 
     @Override

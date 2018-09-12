@@ -57,7 +57,6 @@ public class Inicio extends AppCompatActivity {
         dbR = new RetoDB(Inicio.this);
 
         if(db.loadUsuarios().size() == 0){
-
             Usuario usuario = new Usuario(nombre, edad, 0, "pequeno");
             db.insertUsuario(usuario);
 

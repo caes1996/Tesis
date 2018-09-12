@@ -192,6 +192,9 @@ public class FinalNivel1 extends AppCompatActivity {
             case "Contador":
                 img.setImageResource(R.drawable.contaduria_contador);
                 break;
+            case "Auxiliar":
+                img.setImageResource(R.drawable.contaduria_contador);
+                break;
             case "Factura":
                 img.setImageResource(R.drawable.contaduria_factura);
                 break;
@@ -203,6 +206,135 @@ public class FinalNivel1 extends AppCompatActivity {
                 break;
             case "Proveedor":
                 img.setImageResource(R.drawable.contaduria_proveedor);
+                break;
+            case "Fuerza":
+                img.setImageResource(R.drawable.deporte_fuerza);
+                break;
+            case "Ajedrez":
+                img.setImageResource(R.drawable.deporte_ajedrez);
+                break;
+            case "Á     rbitro":
+                img.setImageResource(R.drawable.deporte_arbitro);
+                break;
+            case "Carrera":
+                img.setImageResource(R.drawable.deporte_carrera);
+                break;
+            case "Ciclismo":
+                img.setImageResource(R.drawable.deporte_ciclismo);
+                break;
+            case "Clavado":
+                img.setImageResource(R.drawable.deporte_clavado);
+                break;
+            case "Deporte":
+                img.setImageResource(R.drawable.deporte_deporte);
+                break;
+            case "Entrenar":
+                img.setImageResource(R.drawable.deporte_entrenar);
+                break;
+            case "Esfuerzo":
+                img.setImageResource(R.drawable.deporte_esfuerzo);
+                break;
+            case "Fútbol":
+                img.setImageResource(R.drawable.deporte_futbol);
+                break;
+            case "Lateral":
+                img.setImageResource(R.drawable.deporte_formacion);
+                break;
+            case "Central":
+                img.setImageResource(R.drawable.deporte_formacion);
+                break;
+            case "Volante":
+                img.setImageResource(R.drawable.deporte_formacion);
+                break;
+            case "Delantero":
+                img.setImageResource(R.drawable.deporte_formacion);
+                break;
+            case "Gimnasio":
+                img.setImageResource(R.drawable.deporte_gimnasio);
+                break;
+            case "Mariposa":
+                img.setImageResource(R.drawable.deporte_mariposa);
+                break;
+            case "Natación":
+                img.setImageResource(R.drawable.deporte_natacion);
+                break;
+            case "Olímpico":
+                img.setImageResource(R.drawable.deporte_olimpico);
+                break;
+            case "Patinaje":
+                img.setImageResource(R.drawable.deporte_patinaje);
+                break;
+            case "Pesas":
+                img.setImageResource(R.drawable.deporte_pesas);
+                break;
+            case "Técnico":
+                img.setImageResource(R.drawable.deporte_tecnico);
+                break;
+            case "Tenis":
+                img.setImageResource(R.drawable.deporte_tenis);
+                break;
+            case "Cuerpo":
+                img.setImageResource(R.drawable.deporte_gimnasio);
+                break;
+            case "Deportista":
+                img.setImageResource(R.drawable.deporte_deporte);
+                break;
+            case "Ley":
+                img.setImageResource(R.drawable.derecho_ley);
+                break;
+            case "Juez":
+                img.setImageResource(R.drawable.derecho_juez);
+                break;
+            case "Abogado":
+                img.setImageResource(R.drawable.derecho_abogado);
+                break;
+            case "Jurado":
+                img.setImageResource(R.drawable.derecho_jurado);
+                break;
+            case "Fiscalía":
+                img.setImageResource(R.drawable.derecho_fiscalia);
+                break;
+            case "Constitución":
+                img.setImageResource(R.drawable.derecho_constitucion);
+                break;
+            case "Derecho":
+                img.setImageResource(R.drawable.derecho_derecho);
+                break;
+            case "Bienes":
+                img.setImageResource(R.drawable.derecho_bienes);
+                break;
+            case "Herencia":
+                img.setImageResource(R.drawable.derecho_herencia);
+                break;
+            case "Folleto":
+                img.setImageResource(R.drawable.diseno_folleto);
+                break;
+            case "Ícono":
+                img.setImageResource(R.drawable.diseno_icono);
+                break;
+            case "Lienzo":
+                img.setImageResource(R.drawable.diseno_lienzo);
+                break;
+            case "Mapa":
+                img.setImageResource(R.drawable.diseno_mapa);
+                break;
+            case "Marca":
+                img.setImageResource(R.drawable.diseno_marca);
+                break;
+            case "Publicidad":
+                img.setImageResource(R.drawable.diseno_publicidad);
+                break;
+            case "Tinta":
+                img.setImageResource(R.drawable.diseno_tinta);
+                break;
+            case "Símbolo":
+                img.setImageResource(R.drawable.diseno_simbolo);
+                break;
+            case "Sombra":
+                img.setImageResource(R.drawable.diseno_sombra);
+                break;
+            case "Textura":
+                img.setImageResource(R.drawable.diseno_textura);
                 break;
 
         }

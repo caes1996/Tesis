@@ -59,7 +59,7 @@ public class FinalNivel1 extends AppCompatActivity {
 
     private void configuracion(){
         TextView textView = (TextView) findViewById(R.id.textViewFN1);
-
+        ImageView  img = (ImageView) findViewById(R.id.imageViewFinalNivel1);
         textView.setText(palabra.getNombre());
 
         if(usuario.getTamano().equals("pequeno")){
@@ -71,6 +71,9 @@ public class FinalNivel1 extends AppCompatActivity {
         }
 
         setImg(palabra.getNombre());
+        if(img.getDrawable() == null){
+            img.setImageResource(R.drawable.sonido);
+        }
     }
 
     public void setImg(String palabra){
@@ -336,6 +339,371 @@ public class FinalNivel1 extends AppCompatActivity {
             case "Textura":
                 img.setImageResource(R.drawable.diseno_textura);
                 break;
+            case "Utiles":
+                img.setImageResource(R.drawable.docencia_utiles);
+                break;
+            case "Tarea":
+                img.setImageResource(R.drawable.docencia_tarea);
+                break;
+            case "Salón":
+                img.setImageResource(R.drawable.docencia_salon);
+                break;
+            case "Educación":
+                img.setImageResource(R.drawable.docencia_ensenanza);
+                break;
+            case "Enseñanza":
+                img.setImageResource(R.drawable.docencia_ensenanza);
+                break;
+            case "Familia":
+                img.setImageResource(R.drawable.docencia_familia);
+                break;
+            case "Cuaderno":
+                img.setImageResource(R.drawable.docencia_utiles);
+                break;
+            case "Vacaciones":
+                img.setImageResource(R.drawable.deporte_clavado);
+                break;
+            case "Materia":
+                img.setImageResource(R.drawable.docencia_utiles);
+                break;
+            case "Amistad":
+                img.setImageResource(R.drawable.docencia_salon);
+                break;
+            case "Rector":
+                img.setImageResource(R.drawable.docencia_educacion);
+                break;
+            case "Profesor":
+                img.setImageResource(R.drawable.docencia_educacion);
+                break;
+            case "Maestro":
+                img.setImageResource(R.drawable.docencia_educacion);
+                break;
+            case "Notas":
+                img.setImageResource(R.drawable.docencia_tarea);
+                break;
+            case "Atención":
+                img.setImageResource(R.drawable.docencia_ensenanza);
+                break;
+            case "Docente":
+                img.setImageResource(R.drawable.docencia_educacion);
+                break;
+            case "Estudiante":
+                img.setImageResource(R.drawable.docencia_salon);
+                break;
+            case "Ética":
+                img.setImageResource(R.drawable.docencia_etica);
+                break;
+            case "Física":
+                img.setImageResource(R.drawable.docencia_fisica);
+                break;
+            case "Química":
+                img.setImageResource(R.drawable.docencia_quimica);
+                break;
+            case "Cálculo":
+                img.setImageResource(R.drawable.docencia_calculo);
+                break;
+            case "Borrador":
+                img.setImageResource(R.drawable.docencia_borrador);
+                break;
+            case "Tablero":
+                img.setImageResource(R.drawable.docencia_tablero);
+                break;
+            case "Balanza":
+                img.setImageResource(R.drawable.docencia_etica);
+                break;
+            case "Moneda":
+                img.setImageResource(R.drawable.money);
+                break;
+            case "Población":
+                img.setImageResource(R.drawable.docencia_familia);
+                break;
+            case "Interés":
+                img.setImageResource(R.drawable.derecho_herencia);
+                break;
+            case "Bolsa":
+                img.setImageResource(R.drawable.money);
+                break;
+            case "Salario":
+                img.setImageResource(R.drawable.economia_capital);
+                break;
+            case "Capital":
+                img.setImageResource(R.drawable.economia_capital);
+                break;
+            case "Ahorro":
+                img.setImageResource(R.drawable.economia_ahorro);
+                break;
+            case "Mercado":
+                img.setImageResource(R.drawable.economia_mercado);
+                break;
+            case "Oferta":
+                img.setImageResource(R.drawable.economia_oferta);
+                break;
+            case "Demanda":
+                img.setImageResource(R.drawable.economia_oferta);
+                break;
+            case "Manzana":
+                img.setImageResource(R.drawable.frutas_manzana);
+                break;
+            case "Pera":
+                img.setImageResource(R.drawable.frutas_pera);
+                break;
+            case "Sandía":
+                img.setImageResource(R.drawable.frutas_sandia);
+                break;
+            case "Guayaba":
+                img.setImageResource(R.drawable.frutas_guayaba);
+                break;
+            case "Maracuyá":
+                img.setImageResource(R.drawable.frutas_maracuya);
+                break;
+            case "Banano":
+                img.setImageResource(R.drawable.frutas_banano);
+                break;
+            case "Granadilla":
+                img.setImageResource(R.drawable.frutas_granadilla);
+                break;
+            case "Lulo":
+                img.setImageResource(R.drawable.frutas_lulo);
+                break;
+            case "Mango":
+                img.setImageResource(R.drawable.frutas_mango);
+                break;
+            case "Mora":
+                img.setImageResource(R.drawable.frutas_mora);
+                break;
+            case "Fresa":
+                img.setImageResource(R.drawable.frutas_fresa);
+                break;
+            case "Aguacate":
+                img.setImageResource(R.drawable.frutas_aguacate);
+                break;
+            case "Zapote":
+                img.setImageResource(R.drawable.frutas_zapote);
+                break;
+            case "Guanábana":
+                img.setImageResource(R.drawable.frutas_guanabana);
+                break;
+            case "Papaya":
+                img.setImageResource(R.drawable.frutas_papaya);
+                break;
+            case "Piña":
+                img.setImageResource(R.drawable.frutas_pina);
+                break;
+            case "Tomate":
+                img.setImageResource(R.drawable.frutas_tomate);
+                break;
+            case "Uva":
+                img.setImageResource(R.drawable.frutas_uva);
+                break;
+            case "Curuba":
+                img.setImageResource(R.drawable.frutas_curuba);
+                break;
+            case "Borojó":
+                img.setImageResource(R.drawable.frutas_borojo);
+                break;
+            case "Carambola":
+                img.setImageResource(R.drawable.frutas_carambola);
+                break;
+            case "Escoba":
+                img.setImageResource(R.drawable.general_escoba);
+                break;
+            case "Trapeador":
+                img.setImageResource(R.drawable.general_trapeador);
+                break;
+            case "Recogedor":
+                img.setImageResource(R.drawable.general_recogedor);
+                break;
+            case "Lavadora":
+                img.setImageResource(R.drawable.general_lavadora);
+                break;
+            case "Balde":
+                img.setImageResource(R.drawable.general_balde);
+                break;
+            case "Cepillo":
+                img.setImageResource(R.drawable.implementospersonal_cepillo);
+                break;
+            case "Jabón":
+                img.setImageResource(R.drawable.implementospersonal_jabon);
+                break;
+            case "Shampoo":
+                img.setImageResource(R.drawable.implementospersonal_shampoo);
+                break;
+            case "Toalla":
+                img.setImageResource(R.drawable.implementospersonal_toalla);
+                break;
+            case "Peineta":
+                img.setImageResource(R.drawable.implementospersonal_peineta);
+                break;
+            case "Diseño":
+                img.setImageResource(R.drawable.diseno_publicidad);
+                break;
+            case "Civil":
+                img.setImageResource(R.drawable.ingenieria_civil);
+                break;
+            case "Sistema":
+                img.setImageResource(R.drawable.ingenieria_sistemas);
+                break;
+            case "Desarrollo":
+                img.setImageResource(R.drawable.ingenieria_desarrollo);
+                break;
+            case "Análisis":
+                img.setImageResource(R.drawable.ingenieria_analisis);
+                break;
+            case "Calidad":
+                img.setImageResource(R.drawable.ingenieria_calidad);
+                break;
+            case "Prototipo":
+                img.setImageResource(R.drawable.ingenieria_prototipo);
+                break;
+            case "Ingenio":
+                img.setImageResource(R.drawable.ingenieria_ingenio);
+                break;
+            case "Idea":
+                img.setImageResource(R.drawable.ingenieria_idea);
+                break;
+            case "Página":
+                img.setImageResource(R.drawable.ingenieria_pagina);
+                break;
+            case "Computador":
+                img.setImageResource(R.drawable.ingenieria_computador);
+                break;
+            case "Portátil":
+                img.setImageResource(R.drawable.ingenieria_portatil);
+                break;
+            case "Redes":
+                img.setImageResource(R.drawable.ingenieria_redes);
+                break;
+            case "Fractura":
+                img.setImageResource(R.drawable.medicina_fractura);
+                break;
+            case "Huesos":
+                img.setImageResource(R.drawable.medicina_huesos);
+                break;
+            case "Tendones":
+                img.setImageResource(R.drawable.medicina_tendon);
+                break;
+            case "Nervio":
+                img.setImageResource(R.drawable.medicina_nervio);
+                break;
+            case "Músculo":
+                img.setImageResource(R.drawable.medicina_musculo);
+                break;
+            case "Sutura":
+                img.setImageResource(R.drawable.medicina_sutura);
+                break;
+            case "Tijeras":
+                img.setImageResource(R.drawable.medicina_tijeras);
+                break;
+            case "Gasas":
+                img.setImageResource(R.drawable.medicina_gasas);
+                break;
+            case "Sonda":
+                img.setImageResource(R.drawable.medicina_sonda);
+                break;
+            case "Embarazo":
+                img.setImageResource(R.drawable.medicina_embarazo);
+                break;
+            case "Doctor":
+                img.setImageResource(R.drawable.medicina_doctor);
+                break;
+            case "Medicina":
+                img.setImageResource(R.drawable.medicina_medicina);
+                break;
+            case "Paciente":
+                img.setImageResource(R.drawable.medicina_fractura);
+                break;
+            case "Bicicleta":
+                img.setImageResource(R.drawable.medios_transporte_bicicleta);
+                break;
+            case "Carro":
+                img.setImageResource(R.drawable.medios_transporte_carro);
+                break;
+            case "Tren":
+                img.setImageResource(R.drawable.medios_transporte_tren);
+                break;
+            case "Avión":
+                img.setImageResource(R.drawable.medios_transporte_avion);
+                break;
+            case "Cero":
+                img.setImageResource(R.drawable.numeros_cero);
+                break;
+            case "Uno":
+                img.setImageResource(R.drawable.numeros_uno);
+                break;
+            case "Dos":
+                img.setImageResource(R.drawable.numeros_dos);
+                break;
+            case "Tres":
+                img.setImageResource(R.drawable.numeros_tres);
+                break;
+            case "Cuatro":
+                img.setImageResource(R.drawable.numeros_cuatro);
+                break;
+            case "Cinco":
+                img.setImageResource(R.drawable.numeros_cinco);
+                break;
+            case "Seis":
+                img.setImageResource(R.drawable.numeros_seis);
+                break;
+            case "Siete":
+                img.setImageResource(R.drawable.numeros_siete);
+                break;
+            case "Ocho":
+                img.setImageResource(R.drawable.numeros_ocho);
+                break;
+            case "Nueve":
+                img.setImageResource(R.drawable.numeros_nueve);
+                break;
+            case "Diez":
+                img.setImageResource(R.drawable.numeros_diez);
+                break;
+            case "Once":
+                img.setImageResource(R.drawable.numeros_once);
+                break;
+            case "Doce":
+                img.setImageResource(R.drawable.numeros_doce);
+                break;
+            case "Trece":
+                img.setImageResource(R.drawable.numeros_trece);
+                break;
+            case "Catorce":
+                img.setImageResource(R.drawable.numeros_catorce);
+                break;
+            case "Quince":
+                img.setImageResource(R.drawable.numeros_quince);
+                break;
+            case "Veinte":
+                img.setImageResource(R.drawable.numeros_veinte);
+                break;
+            case "Treinta":
+                img.setImageResource(R.drawable.numeros_treinta);
+                break;
+            case "Cuarenta":
+                img.setImageResource(R.drawable.numeros_cuarenta);
+                break;
+            case "Cincuenta":
+                img.setImageResource(R.drawable.numeros_cincuenta);
+                break;
+            case "Sesenta":
+                img.setImageResource(R.drawable.numeros_sesenta);
+                break;
+            case "Setenta":
+                img.setImageResource(R.drawable.numeros_setenta);
+                break;
+            case "Ochenta":
+                img.setImageResource(R.drawable.numeros_ochenta);
+                break;
+            case "Noventa":
+                img.setImageResource(R.drawable.numeros_noventa);
+                break;
+            case "Cien":
+                img.setImageResource(R.drawable.numeros_cien);
+                break;
+            case "Mil":
+                img.setImageResource(R.drawable.numeros_mil);
+                break;
+
+
 
         }
 

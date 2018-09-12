@@ -199,7 +199,7 @@ public class Nivel1Activity  extends AppCompatActivity {
                         dbP.insertPalabra(granadilla);
 
                         Palabra lulo = new Palabra("Lulo", 60 , 20, 0, tienda.getId(), categoria.getId());
-                        dbP.insertPalabra(pera);
+                        dbP.insertPalabra(lulo);
 
                         Palabra mango = new Palabra("Mango", 60 , 20, 0, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(mango);

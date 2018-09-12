@@ -702,6 +702,45 @@ public class FinalNivel1 extends AppCompatActivity {
             case "Mil":
                 img.setImageResource(R.drawable.numeros_mil);
                 break;
+            case "Sala":
+                img.setImageResource(R.drawable.partes_casa_sala);
+                break;
+            case "Baño":
+                img.setImageResource(R.drawable.partes_casa_bano);
+                break;
+            case "Habitación":
+                img.setImageResource(R.drawable.partes_casa_habitacion);
+                break;
+            case "Cocina":
+                img.setImageResource(R.drawable.partes_casa_cocina);
+                break;
+            case "Terraza":
+                img.setImageResource(R.drawable.partes_casa_terraza);
+                break;
+            case "Balcón":
+                img.setImageResource(R.drawable.partes_casa_balcon);
+                break;
+            case "Comedor":
+                img.setImageResource(R.drawable.partes_casa_comedor);
+                break;
+            case "Ventana":
+                img.setImageResource(R.drawable.partes_casa_ventana);
+                break;
+            case "Puerta":
+                img.setImageResource(R.drawable.partes_casa_puerta);
+                break;
+            case "Cajón":
+                img.setImageResource(R.drawable.partes_casa_cajon);
+                break;
+            case "Armario":
+                img.setImageResource(R.drawable.partes_casa_armario);
+                break;
+            case "Lavamanos":
+                img.setImageResource(R.drawable.partes_casa_lavamanos);
+                break;
+            case "Sanitario":
+                img.setImageResource(R.drawable.partes_casa_sanitario);
+                break;
 
 
 

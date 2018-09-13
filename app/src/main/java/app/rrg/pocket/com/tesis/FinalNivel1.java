@@ -741,8 +741,135 @@ public class FinalNivel1 extends AppCompatActivity {
             case "Sanitario":
                 img.setImageResource(R.drawable.partes_casa_sanitario);
                 break;
-
-
+            case "Dedo":
+                img.setImageResource(R.drawable.partes_cuerpo_dedo);
+                break;
+            case "Diente":
+                img.setImageResource(R.drawable.partes_cuerpo_diente);
+                break;
+            case "Labios":
+                img.setImageResource(R.drawable.partes_cuerpo_labios);
+                break;
+            case "Nariz":
+                img.setImageResource(R.drawable.partes_cuerpo_nariz);
+                break;
+            case "Cabello":
+                img.setImageResource(R.drawable.partes_cuerpo_cabello);
+                break;
+            case "Uña":
+                img.setImageResource(R.drawable.partes_cuerpo_una);
+                break;
+            case "Cejas":
+                img.setImageResource(R.drawable.partes_cuerpo_cejas);
+                break;
+            case "Barba":
+                img.setImageResource(R.drawable.partes_cuerpo_barba);
+                break;
+            case "Tobillo":
+                img.setImageResource(R.drawable.partes_cuerpo_tobillo);
+                break;
+            case "Talón":
+                img.setImageResource(R.drawable.partes_cuerpo_tobillo);
+                break;
+            case "Pestaña":
+                img.setImageResource(R.drawable.partes_cuerpo_pestana);
+                break;
+            case "Mano":
+                img.setImageResource(R.drawable.partes_cuerpo_dedo);
+                break;
+            case "Pie":
+                img.setImageResource(R.drawable.partes_cuerpo_tobillo);
+                break;
+            case "Rodilla":
+                img.setImageResource(R.drawable.partes_cuerpo_rodilla);
+                break;
+            case "Codo":
+                img.setImageResource(R.drawable.partes_cuerpo_codo);
+                break;
+            case "Cabeza":
+                img.setImageResource(R.drawable.partes_cuerpo_cabeza);
+                break;
+            case "Espalda":
+                img.setImageResource(R.drawable.partes_cuerpo_espalda);
+                break;
+            case "Pierna":
+                img.setImageResource(R.drawable.partes_cuerpo_pierna);
+                break;
+            case "Hombro":
+                img.setImageResource(R.drawable.partes_cuerpo_hombro);
+                break;
+            case "Pecho":
+                img.setImageResource(R.drawable.partes_cuerpo_pecho);
+                break;
+            case "Brazo":
+                img.setImageResource(R.drawable.partes_cuerpo_brazo);
+                break;
+            case "Cadera":
+                img.setImageResource(R.drawable.partes_cuerpo_cadera);
+                break;
+            case "Orejas":
+                img.setImageResource(R.drawable.partes_cuerpo_oreja);
+                break;
+            case "Lengua":
+                img.setImageResource(R.drawable.partes_cuerpo_lengua);
+                break;
+            case "Ojos":
+                img.setImageResource(R.drawable.partes_cuerpo_ojos);
+                break;
+            case "Cuello":
+                img.setImageResource(R.drawable.partes_cuerpo_cuello);
+                break;
+            case "Sancocho":
+                img.setImageResource(R.drawable.platos_sancocho);
+                break;
+            case "Ajiaco":
+                img.setImageResource(R.drawable.platos_ajiaco);
+                break;
+            case "Frijoles":
+                img.setImageResource(R.drawable.platos_frijoles);
+                break;
+            case "Lentejas":
+                img.setImageResource(R.drawable.platos_lentejas);
+                break;
+            case "Arroz":
+                img.setImageResource(R.drawable.platos_arroz);
+                break;
+            case "Chuleta":
+                img.setImageResource(R.drawable.platos_chuleta);
+                break;
+            case "Pollo":
+                img.setImageResource(R.drawable.platos_pollo);
+                break;
+            case "Hígado":
+                img.setImageResource(R.drawable.platos_higado);
+                break;
+            case "Cerdo":
+                img.setImageResource(R.drawable.platos_cerdo);
+                break;
+            case "Costilla":
+                img.setImageResource(R.drawable.platos_costilla);
+                break;
+            case "Pescado":
+                img.setImageResource(R.drawable.platos_pescado);
+                break;
+            case "Patacón":
+                img.setImageResource(R.drawable.platos_patacon);
+                break;
+            case "Pastel":
+                img.setImageResource(R.drawable.platos_pastel);
+                break;
+            case "Arepa":
+                img.setImageResource(R.drawable.platos_arepa);
+                break;
+            case "Papa":
+                img.setImageResource(R.drawable.platos_papa);
+                break;
+            case "Tamal":
+                img.setImageResource(R.drawable.platos_tamal);
+                break;
+            case "Sopa":
+                img.setImageResource(R.drawable.platos_sopa);
+                break;
 
         }
 

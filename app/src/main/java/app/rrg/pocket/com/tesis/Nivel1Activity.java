@@ -1446,7 +1446,7 @@ public class Nivel1Activity  extends AppCompatActivity {
                         Palabra aros = new Palabra("Aros", 60, 20, 0, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(aros);
 
-                        Palabra cadenaP = new Palabra("CadenaP", 90, 30, 0, tienda.getId(), categoria.getId());
+                        Palabra cadenaP = new Palabra("Cadena", 90, 30, 0, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(cadenaP);
 
                         Palabra correa = new Palabra("Correa", 90, 30, 0, tienda.getId(), categoria.getId());

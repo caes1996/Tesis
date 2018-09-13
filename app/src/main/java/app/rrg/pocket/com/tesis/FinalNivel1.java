@@ -3,32 +3,38 @@ package app.rrg.pocket.com.tesis;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Locale;
+
 import app.rrg.pocket.com.tesis.Entities.Palabra;
 import app.rrg.pocket.com.tesis.Entities.Usuario;
-import app.rrg.pocket.com.tesis.R;
 import app.rrg.pocket.com.tesis.Utilidades.PalabraDB;
 import app.rrg.pocket.com.tesis.Utilidades.UsuarioDB;
 
-public class FinalNivel1 extends AppCompatActivity {
+public class FinalNivel1 extends AppCompatActivity implements TextToSpeech.OnInitListener{
 
     String idPalabra;
     private PalabraDB dbP;
     private UsuarioDB db;
     Usuario usuario;
     Palabra palabra;
+    TextToSpeech tts;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        tts = new TextToSpeech(this,this);
 
         recibirId();
         dbP = new PalabraDB(FinalNivel1.this);
@@ -76,7 +82,7 @@ public class FinalNivel1 extends AppCompatActivity {
         }
     }
 
-    public void setImg(String palabra){
+    public void setImg(final String palabra){
 
         ImageView  img = (ImageView) findViewById(R.id.imageViewFinalNivel1);
 
@@ -870,9 +876,264 @@ public class FinalNivel1 extends AppCompatActivity {
             case "Sopa":
                 img.setImageResource(R.drawable.platos_sopa);
                 break;
-
+            case "Arma":
+                img.setImageResource(R.drawable.policia_arma);
+                break;
+            case "Uniforme":
+                img.setImageResource(R.drawable.policia_uniforme);
+                break;
+            case "Crimen":
+                img.setImageResource(R.drawable.policia_crimen);
+                break;
+            case "Oficial":
+                img.setImageResource(R.drawable.policia_ejercito);
+                break;
+            case "Coronel":
+                img.setImageResource(R.drawable.policia_ejercito);
+                break;
+            case "Comandante":
+                img.setImageResource(R.drawable.policia_ejercito);
+                break;
+            case "Sargento":
+                img.setImageResource(R.drawable.policia_ejercito);
+                break;
+            case "Captura":
+                img.setImageResource(R.drawable.policia_captura);
+                break;
+            case "Autoridad":
+                img.setImageResource(R.drawable.policia_policia);
+                break;
+            case "Policía":
+                img.setImageResource(R.drawable.policia_policia);
+                break;
+            case "Zapatos":
+                img.setImageResource(R.drawable.prendas_zapatos);
+                break;
+            case "Pantalón":
+                img.setImageResource(R.drawable.prendas_pantalon);
+                break;
+            case "Buzo":
+                img.setImageResource(R.drawable.prendas_buzo);
+                break;
+            case "Camisa":
+                img.setImageResource(R.drawable.prendas_camisa);
+                break;
+            case "Camiseta":
+                img.setImageResource(R.drawable.prendas_buzo);
+                break;
+            case "Corbata":
+                img.setImageResource(R.drawable.prendas_corbata);
+                break;
+            case "Sombrero":
+                img.setImageResource(R.drawable.prendas_sombrero);
+                break;
+            case "Bermuda":
+                img.setImageResource(R.drawable.prendas_bermuda);
+                break;
+            case "Medias":
+                img.setImageResource(R.drawable.prendas_medias);
+                break;
+            case "Falda":
+                img.setImageResource(R.drawable.prendas_falda);
+                break;
+            case "Chaqueta":
+                img.setImageResource(R.drawable.prendas_chaqueta);
+                break;
+            case "Saco":
+                img.setImageResource(R.drawable.prendas_chaqueta);
+                break;
+            case "Calzón":
+                img.setImageResource(R.drawable.prendas_calzon);
+                break;
+            case "Bóxer":
+                img.setImageResource(R.drawable.prendas_boxer);
+                break;
+            case "Anillo":
+                img.setImageResource(R.drawable.prendas_anillo);
+                break;
+            case "Collar":
+                img.setImageResource(R.drawable.prendas_collar);
+                break;
+            case "Bufanda":
+                img.setImageResource(R.drawable.prendas_bufanda);
+                break;
+            case "Ruana":
+                img.setImageResource(R.drawable.prendas_ruana);
+                break;
+            case "Chaleco":
+                img.setImageResource(R.drawable.prendas_chaleco);
+                break;
+            case "Blusa":
+                img.setImageResource(R.drawable.prendas_blusa);
+                break;
+            case "Sandalia":
+                img.setImageResource(R.drawable.prendas_sandalia);
+                break;
+            case "Brasier":
+                img.setImageResource(R.drawable.prendas_brasier);
+                break;
+            case "Top":
+                img.setImageResource(R.drawable.prendas_top);
+                break;
+            case "Tanga":
+                img.setImageResource(R.drawable.prendas_tanga);
+                break;
+            case "Arete":
+                img.setImageResource(R.drawable.prendas_arete);
+                break;
+            case "Diadema":
+                img.setImageResource(R.drawable.prendas_diadema);
+                break;
+            case "Moño":
+                img.setImageResource(R.drawable.prendas_mono);
+                break;
+            case "Pulsera":
+                img.setImageResource(R.drawable.prendas_pulsera);
+                break;
+            case "Aros":
+                img.setImageResource(R.drawable.prendas_aros);
+                break;
+            case "Cadena":
+                img.setImageResource(R.drawable.prendas_cadena);
+                break;
+            case "Correa":
+                img.setImageResource(R.drawable.prendas_correa);
+                break;
+            case "Gafas":
+                img.setImageResource(R.drawable.prendas_gafas);
+                break;
+            case "Parque":
+                img.setImageResource(R.drawable.sitios_parque);
+                break;
+            case "Piscina":
+                img.setImageResource(R.drawable.sitios_piscina);
+                break;
+            case "Escuela":
+                img.setImageResource(R.drawable.sitios_escuela);
+                break;
+            case "Colegio":
+                img.setImageResource(R.drawable.sitios_escuela);
+                break;
+            case "Ciudad":
+                img.setImageResource(R.drawable.sitios_ciudad);
+                break;
+            case "Pueblo":
+                img.setImageResource(R.drawable.sitios_pueblo);
+                break;
+            case "Lago":
+                img.setImageResource(R.drawable.sitios_lago);
+                break;
+            case "Estadio":
+                img.setImageResource(R.drawable.sitios_estadio);
+                break;
+            case "Iglesia":
+                img.setImageResource(R.drawable.sitios_iglesia);
+                break;
+            case "Banco":
+                img.setImageResource(R.drawable.sitios_banco);
+                break;
+            case "Hospital":
+                img.setImageResource(R.drawable.sitios_hospital);
+                break;
+            case "Oficina":
+                img.setImageResource(R.drawable.sitios_oficina);
+                break;
+            case "Zanahoria":
+                img.setImageResource(R.drawable.verduras_zanahoria);
+                break;
+            case "Remolacha":
+                img.setImageResource(R.drawable.verduras_remolacha);
+                break;
+            case "Repollo":
+                img.setImageResource(R.drawable.verduras_repollo);
+                break;
+            case "Cebolla":
+                img.setImageResource(R.drawable.verduras_cebolla);
+                break;
+            case "Brócoli":
+                img.setImageResource(R.drawable.verduras_brocoli);
+                break;
+            case "Zapallo":
+                img.setImageResource(R.drawable.verduras_zapallo);
+                break;
+            case "Habichuela":
+                img.setImageResource(R.drawable.verduras_habichuela);
+                break;
+            case "Coliflor":
+                img.setImageResource(R.drawable.verduras_coliflor);
+                break;
+            case "Pepino":
+                img.setImageResource(R.drawable.verduras_pepino);
+                break;
+            case "Espinaca":
+                img.setImageResource(R.drawable.verduras_espinaca);
+                break;
+            case "Lechuga":
+                img.setImageResource(R.drawable.verduras_lechuga);
+                break;
+            case "Pimentón":
+                img.setImageResource(R.drawable.verduras_pimenton);
+                break;
+            case "Ajo":
+                img.setImageResource(R.drawable.verduras_ajo);
+                break;
+            case "Arveja":
+                img.setImageResource(R.drawable.verduras_arveja);
+                break;
+            case "Guitarra":
+                img.setImageResource(R.drawable.instrumentos_guitarra);
+                break;
+            case "Acordeón":
+                img.setImageResource(R.drawable.instrumentos_acordeon);
+                break;
+            case "Piano":
+                img.setImageResource(R.drawable.instrumentos_piano);
+                break;
+            case "Violín":
+                img.setImageResource(R.drawable.instrumentos_violin);
+                break;
+            case "Batería":
+                img.setImageResource(R.drawable.instrumentos_bateria);
+                break;
+            case "Flauta":
+                img.setImageResource(R.drawable.instrumentos_flauta);
+                break;
+            case "Empresa":
+                img.setImageResource(R.drawable.administracion_empresa);
+                break;
+            case "Equipo":
+                img.setImageResource(R.drawable.administracion_equipo);
+                break;
         }
 
+        img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                speakOut();
+            }
+        });
+
+    }
+
+    @Override
+    public void onInit(int status){
+
+        if(status == TextToSpeech.SUCCESS){
+            int result = tts.setLanguage(Locale.getDefault());
+            if(result == TextToSpeech.LANG_NOT_SUPPORTED ||
+                    result == TextToSpeech.LANG_MISSING_DATA){
+                Log.e("TTS", "Este lenguaje no es soportado");
+            }else{
+                //speakOut();
+            }
+        }else{
+            Log.e("TTS", "Inicialización del lenguaje fallida");
+        }
+
+    }
+
+    public void speakOut(){
+        tts.speak(palabra.getNombre(), TextToSpeech.QUEUE_FLUSH, null);
     }
 
     @Override

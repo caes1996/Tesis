@@ -35,7 +35,7 @@ public class RecomendacionesActivity extends AppCompatActivity {
                         " son diagnosticados con una Afasia de BROCA o TRANSCORTICAL MOTORA. Por lo tanto estas personas " +
                         "podrán obtener mejores resultados. \n" + "\n" +
                         "Teniendo en cuenta que la aplicación es orientada a personas adultas, se tuvo que considerar la " +
-                        "opción de cambiar el tamaño de la fuente, para así poder brindar una mejor experiecia visual, por " +
+                        "opción de cambiar el tamaño de la fuente, para así poder brindar una mejor experiencia visual, por " +
                         "lo tanto es recomendable tener configurado su dispositivo móvil con un tamaño de pantalla relativamente bajo." +
                         "\n" + "\n" +
                         "De antemano muchas gracias por su uso. Daniel, Cristian y equipo de desarrollo .");

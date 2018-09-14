@@ -12,4 +12,12 @@
         android:layout_marginTop="38dp"
         android:text="TextView"
         android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/imageViewFinalNivel3"
+        android:layout_width="279dp"
+        android:layout_height="182dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="105dp" />
 </RelativeLayout>

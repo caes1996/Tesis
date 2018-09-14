@@ -37,6 +37,7 @@ public class FinalNivel1 extends AppCompatActivity implements TextToSpeech.OnIni
         tts = new TextToSpeech(this,this);
 
         recibirId();
+
         dbP = new PalabraDB(FinalNivel1.this);
         db = new UsuarioDB(FinalNivel1.this);
 

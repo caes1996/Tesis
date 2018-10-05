@@ -1,0 +1,12 @@
+LICENSE
+es-20k.lm
+es-ptm/feat.params
+es-ptm/mdef
+es-ptm/means
+es-ptm/mixture_weights
+es-ptm/noisedict
+es-ptm/sendump
+es-ptm/transition_matrices
+es-ptm/variances
+es.dict
+keys.gram

@@ -1,10 +1,19 @@
 package app.rrg.pocket.com.tesis;
 
+import android.Manifest;
 import android.content.ContentValues;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
+import android.os.AsyncTask;
+import android.os.Build;
+import android.provider.Settings;
+import android.support.annotation.NonNull;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.support.v4.view.ViewPager;
@@ -15,6 +24,8 @@ import android.view.MenuItem;
 
 import android.widget.Toast;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Random;
 
 import app.rrg.pocket.com.tesis.Entities.Nivel;
@@ -27,9 +38,13 @@ import app.rrg.pocket.com.tesis.Utilidades.RetoDB;
 import app.rrg.pocket.com.tesis.Utilidades.TiendaDB;
 import app.rrg.pocket.com.tesis.Utilidades.UsuarioDB;
 import app.rrg.pocket.com.tesis.Utilidades.VocabularioDB;
+import edu.cmu.pocketsphinx.Assets;
+import edu.cmu.pocketsphinx.Hypothesis;
+import edu.cmu.pocketsphinx.SpeechRecognizer;
 
-public class Inicio extends AppCompatActivity {
+import static edu.cmu.pocketsphinx.SpeechRecognizerSetup.defaultSetup;
 
+public class Inicio extends AppCompatActivity{
 
     private static final String TAG = "MainActivity";
     private  SectionsPageAdapter mSectionsPageAdapter;
@@ -45,6 +60,9 @@ public class Inicio extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio);
+
+        checkPermission();
+
         conexion = new DBHelper(this);
 
         String nombre = "Nombre completo";
@@ -137,5 +155,16 @@ public class Inicio extends AppCompatActivity {
         adapter.addFragment(new TabRetosFragment(), "Retos");
         adapter.addFragment(new TabTiendaFragment(), "Tienda");
         viewPager.setAdapter(adapter);
+    }
+
+    private void checkPermission() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (!(ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED)) {
+                Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
+                        Uri.parse("package:" + getPackageName()));
+                startActivity(intent);
+                finish();
+            }
+        }
     }
 }

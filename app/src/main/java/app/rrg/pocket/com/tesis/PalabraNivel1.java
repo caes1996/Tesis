@@ -107,7 +107,6 @@ public class PalabraNivel1  extends AppCompatActivity {
             Intent i = new Intent(context, FinalNivel1.class);
             i.putExtra("idPalabra", "" + palabra.getId());
             startActivity(i);
-
         }
     }
 }

@@ -1,8 +1,6 @@
 package app.rrg.pocket.com.tesis;
 
-import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.support.annotation.Nullable;
@@ -10,6 +8,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -38,6 +37,7 @@ public class FinalNivel1 extends AppCompatActivity implements TextToSpeech.OnIni
     Palabra palabra;
     TextToSpeech tts;
     private SpeechRecognizer recognizer;
+    String text;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -59,39 +59,46 @@ public class FinalNivel1 extends AppCompatActivity implements TextToSpeech.OnIni
         setupActionBar();
         configuracion();
 
-
-        //Tarea en segundo plano encargada de cargar los archivos necesarios para el reconocimiento de voz
-        //Y de ejecutar el mismo
-        new AsyncTask<Void, Void, Exception>() {
+        findViewById(R.id.buttonFN1).setOnTouchListener(new View.OnTouchListener() {
             @Override
-            protected Exception doInBackground(Void... params) {
-                try {
-                    Assets assets = new Assets(getApplicationContext());
-                    File assetDir = assets.syncAssets();
-                    setupRecognizer(assetDir);
-                } catch (IOException e) {
-                    return e;
-                }
-                return null;
-            }
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_UP:
+                        //when the user removed the finger
+                        //editText.setHint("You will see input here");
+                        Toast.makeText(getBaseContext(), "Entendi: " + text, Toast.LENGTH_SHORT).show();
+                        if(palabra.getNombre().toLowerCase().equals(text)) {
+                            Toast.makeText(getBaseContext(), "Dijiste la palabra!!", Toast.LENGTH_SHORT).show();
+                        }else{
+                            Toast.makeText(getBaseContext(), "Por favor, repite de nuevo", Toast.LENGTH_SHORT).show();
+                        }
+                        recognizer.stop();
+                        break;
 
-            @Override
-            protected void onPostExecute(Exception result) {
-                if (result != null) {
-                    Toast.makeText(getBaseContext(),"Failed to init recognizer " + result,Toast.LENGTH_LONG).show();
-                } else {
-                    recognizer.startListening("frases");
+                    case MotionEvent.ACTION_DOWN:
+                        //finger is on the button
+                        //editText.setText("");
+                        //editText.setHint("Listening...");
+                        try {
+                            Assets assets = new Assets(getApplicationContext());
+                            File assetDir = assets.syncAssets();
+                            setupRecognizer(assetDir);
+                            Toast.makeText(getBaseContext(), "Escuchando...",Toast.LENGTH_SHORT).show();
+                            recognizer.startListening("frases");
+                        }catch (IOException e){
+                            Toast.makeText(getBaseContext(),"Failed to init recognizer " + e,Toast.LENGTH_LONG).show();
+                        }
+                        break;
                 }
+                return false;
             }
-        }.execute();
-
+        });
     }
 
     private void setupActionBar(){
         ActionBar actionBar = getSupportActionBar();
         if(actionBar != null){
             actionBar.setDisplayHomeAsUpEnabled(true);
-            //Toast.makeText(this, "Hola", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -1200,11 +1207,9 @@ public class FinalNivel1 extends AppCompatActivity implements TextToSpeech.OnIni
         if(hypothesis == null)
             return;
 
-        //Obtenemos el String de la Hypothesis
-        String text = hypothesis.getHypstr();
-        Toast.makeText(this,text,Toast.LENGTH_LONG).show();
+        //Obtenemos el String de la Hypothesiss
 
-
+        text = hypothesis.getHypstr();
 
         //Reiniciamos el reconocedor, de esta forma reconoce voz de forma continua y limpia el buffer
         resetRecognizer();
@@ -1235,7 +1240,7 @@ public class FinalNivel1 extends AppCompatActivity implements TextToSpeech.OnIni
 
         //Aquí indicamos el archivo que contiene las palabras clave que queremos reconocer
         // para realizar diferentes acciones. En este caso yo creo un archivo llamado "keys.gram"
-        File keysGrammar = new File(assetsDir, "keys.gram");
+        File keysGrammar = new File(assetsDir, "nivel1.gram");
         recognizer.addKeywordSearch("frases",keysGrammar);
     }
 

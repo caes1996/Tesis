@@ -38,6 +38,7 @@ public class FinalNivel2 extends AppCompatActivity implements TextToSpeech.OnIni
     TextToSpeech tts;
     private SpeechRecognizer recognizer;
     String text;
+    boolean acierto;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -52,6 +53,7 @@ public class FinalNivel2 extends AppCompatActivity implements TextToSpeech.OnIni
 
         usuario = db.buscarUsuarios(1);
         palabra = dbP.buscarPalabra(Integer.parseInt(idPalabra));
+        acierto=false;
 
         setContentView(R.layout.activity_finalnivel2);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
@@ -61,29 +63,20 @@ public class FinalNivel2 extends AppCompatActivity implements TextToSpeech.OnIni
         findViewById(R.id.buttonFN2).setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
+                TextView textViewEscucha = (TextView)findViewById(R.id.textView_escuchaN2);
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_UP:
-                        //when the user removed the finger
-                        //editText.setHint("You will see input here");
-                        Toast.makeText(getBaseContext(), "Entendi: " + text, Toast.LENGTH_SHORT).show();
-                        if(palabra.getNombre().toLowerCase().equals(text)) {
-                            Toast.makeText(getBaseContext(), "Dijiste la palabra!!", Toast.LENGTH_SHORT).show();
-                        }else{
-                            Toast.makeText(getBaseContext(), "Por favor, repite de nuevo", Toast.LENGTH_SHORT).show();
-                        }
                         recognizer.stop();
+                        textViewEscucha.setText("");
                         break;
 
                     case MotionEvent.ACTION_DOWN:
-                        //finger is on the button
-                        //editText.setText("");
-                        //editText.setHint("Listening...");
                         try {
                             Assets assets = new Assets(getApplicationContext());
                             File assetDir = assets.syncAssets();
                             setupRecognizer(assetDir);
-                            Toast.makeText(getBaseContext(), "Escuchando...",Toast.LENGTH_SHORT).show();
                             recognizer.startListening("frases");
+                            textViewEscucha.setText("Escuchando...");
                         }catch (IOException e){
                             Toast.makeText(getBaseContext(),"Failed to init recognizer " + e,Toast.LENGTH_LONG).show();
                         }
@@ -132,7 +125,7 @@ public class FinalNivel2 extends AppCompatActivity implements TextToSpeech.OnIni
         ImageView  img = (ImageView) findViewById(R.id.imageViewFinalNivel2);
 
         switch (palabra) {
-            case "Estadística":
+            case "Estadistica":
                 img.setImageResource(R.drawable.administracion_estadistica);
                 break;
             case "Caricatura":
@@ -264,7 +257,105 @@ public class FinalNivel2 extends AppCompatActivity implements TextToSpeech.OnIni
 
     @Override
     public void onResult(Hypothesis hypothesis) {
+        if(text != null){
+            switch (palabra.getNombre()) {
+                case "Estadistica":
+                    if(text.contains("estadistica"))
+                        acierto=true;
+                    break;
+                case "Caricatura":
+                    if(text.contains("caricatura"))
+                        acierto=true;
+                    break;
+                case "Aguamarina":
+                    if(text.contains("aguamarina"))
+                        acierto=true;
+                    break;
+                case "Comunicación":
+                    if(text.contains("comunicacion"))
+                        acierto=true;
+                    break;
+                case "Contaduría":
+                    if(text.contains("contaduria"))
+                        acierto=true;
+                    break;
+                case "Musculatura":
+                    if(text.contains("musculatura"))
+                        acierto=true;
+                    break;
+                case "Creatividad":
+                    if(text.contains("creatividad"))
+                        acierto=true;
+                    break;
+                case "Calificación":
+                    if(text.contains("calificacion"))
+                        acierto=true;
+                    break;
+                case "Aprendizaje":
+                    if(text.contains("aprendizaje"))
+                        acierto=true;
+                    break;
+                case "Matemática":
+                    if(text.contains("matematica"))
+                        acierto=true;
+                    break;
+                case "Economía":
+                    if(text.contains("economia"))
+                        acierto=true;
+                    break;
+                case "Aspiradora":
+                    if(text.contains("aspiradora"))
+                        acierto=true;
+                    break;
+                case "Investigación":
+                    if(text.contains("investigacion"))
+                        acierto=true;
+                    break;
+                case "Experimento":
+                    if(text.contains("experimento"))
+                        acierto=true;
+                    break;
+                case "Probabilidad":
+                    if(text.contains("probabilidad"))
+                        acierto=true;
+                    break;
+                case "Ingeniería":
+                    if(text.contains("ingenieria"))
+                        acierto=true;
+                    break;
+                case "Radiografía":
+                    if(text.contains("radiografia"))
+                        acierto=true;
+                    break;
+                case "Ecografía":
+                    if(text.contains("ecografia"))
+                        acierto=true;
+                    break;
+                case "Articulaciones":
+                    if(text.contains("articulaciones"))
+                        acierto=true;
+                    break;
+                case "Aborrajado":
+                    if(text.contains("aborrajado"))
+                        acierto=true;
+                    break;
+                case "Universidad":
+                    if(text.contains("universidad"))
+                        acierto=true;
+                    break;
+            }
+        }else {
+            acierto=false;
+        }
+        text=null;
 
+        TextView textView = (TextView) findViewById(R.id.textView_escuchaN2);
+        if(acierto){
+            textView.setText("Dijiste la palabra!!");
+            palabraReconocida();
+        }else{
+            textView.setText("Lo lamento, no entiendo.");
+        }
     }
 
     @Override
@@ -296,5 +387,9 @@ public class FinalNivel2 extends AppCompatActivity implements TextToSpeech.OnIni
             recognizer.cancel();
             recognizer.startListening("frases");
         }
+    }
+
+    public void palabraReconocida(){
+
     }
 }

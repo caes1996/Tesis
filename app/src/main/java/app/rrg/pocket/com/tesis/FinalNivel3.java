@@ -1,6 +1,9 @@
 package app.rrg.pocket.com.tesis;
 
 import android.content.pm.ActivityInfo;
+import android.graphics.drawable.AnimationDrawable;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.support.annotation.Nullable;
@@ -38,6 +41,7 @@ public class FinalNivel3 extends AppCompatActivity implements TextToSpeech.OnIni
     TextToSpeech tts;
     private SpeechRecognizer recognizer;
     String text;
+    boolean acierto;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -49,6 +53,7 @@ public class FinalNivel3 extends AppCompatActivity implements TextToSpeech.OnIni
 
         dbP = new PalabraDB(FinalNivel3.this);
         db = new UsuarioDB(FinalNivel3.this);
+        acierto=false;
 
         usuario = db.buscarUsuarios(1);
         palabra = dbP.buscarPalabra(Integer.parseInt(idPalabra));
@@ -61,29 +66,20 @@ public class FinalNivel3 extends AppCompatActivity implements TextToSpeech.OnIni
         findViewById(R.id.buttonFN3).setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
+                TextView textViewEscucha = (TextView)findViewById(R.id.textView_escuchaN3);
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_UP:
-                        //when the user removed the finger
-                        //editText.setHint("You will see input here");
-                        Toast.makeText(getBaseContext(), "Entendi: " + text, Toast.LENGTH_SHORT).show();
-                        if(palabra.getNombre().toLowerCase().equals(text)) {
-                            Toast.makeText(getBaseContext(), "Dijiste la palabra!!", Toast.LENGTH_SHORT).show();
-                        }else{
-                            Toast.makeText(getBaseContext(), "Por favor, repite de nuevo", Toast.LENGTH_SHORT).show();
-                        }
                         recognizer.stop();
+                        textViewEscucha.setText("");
                         break;
 
                     case MotionEvent.ACTION_DOWN:
-                        //finger is on the button
-                        //editText.setText("");
-                        //editText.setHint("Listening...");
                         try {
                             Assets assets = new Assets(getApplicationContext());
                             File assetDir = assets.syncAssets();
                             setupRecognizer(assetDir);
-                            Toast.makeText(getBaseContext(), "Escuchando...",Toast.LENGTH_SHORT).show();
                             recognizer.startListening("frases");
+                            textViewEscucha.setText("Escuchando...");
                         }catch (IOException e){
                             Toast.makeText(getBaseContext(),"Failed to init recognizer " + e,Toast.LENGTH_LONG).show();
                         }
@@ -213,7 +209,6 @@ public class FinalNivel3 extends AppCompatActivity implements TextToSpeech.OnIni
     public void onPartialResult(Hypothesis hypothesis) {
         if(hypothesis == null)
             return;
-
         //Obtenemos el String de la Hypothesiss
 
         text = hypothesis.getHypstr();
@@ -224,7 +219,57 @@ public class FinalNivel3 extends AppCompatActivity implements TextToSpeech.OnIni
 
     @Override
     public void onResult(Hypothesis hypothesis) {
+        if(text != null){
+            switch (palabra.getNombre()) {
+                case "Trabajo en grupo":
+                    if(text.contains("trabajo en grupo"))
+                        acierto=true;
+                    break;
+                case "Perro caliente":
+                    if(text.contains("perro caliente"))
+                        acierto=true;
+                    break;
+                case "Tenis de mesa":
+                    if(text.contains("tenis de mesa"))
+                        acierto=true;
+                    break;
+                case "Ciencias sociales":
+                    if(text.contains("ciencias sociales"))
+                        acierto=true;
+                    break;
+                case "Tomate de árbol":
+                    if(text.contains("tomate de arbol"))
+                        acierto=true;
+                    break;
+                case "Hilo dental":
+                    if(text.contains("hilo dental"))
+                        acierto=true;
+                    break;
+                case "Crema dental":
+                    if(text.contains("crema dental"))
+                        acierto=true;
+                    break;
+                case "Arroz con pollo":
+                    if(text.contains("arroz con pollo"))
+                        acierto=true;
+                    break;
+                case "Bandeja paisa":
+                    if(text.contains("bandeja paisa"))
+                        acierto=true;
+                    break;
+            }
+        }else {
+            acierto=false;
+        }
+        text=null;
 
+        TextView textView = (TextView) findViewById(R.id.textView_escuchaN3);
+        if(acierto){
+            textView.setText("Dijiste la palabra!!");
+            palabraReconocida();
+        }else{
+            textView.setText("Lo lamento, no entiendo.");
+        }        
     }
 
     @Override
@@ -256,5 +301,9 @@ public class FinalNivel3 extends AppCompatActivity implements TextToSpeech.OnIni
             recognizer.cancel();
             recognizer.startListening("frases");
         }
+    }
+
+    public void palabraReconocida(){
+
     }
 }

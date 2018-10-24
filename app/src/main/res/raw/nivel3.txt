@@ -1,0 +1,16 @@
+buen dia;Buen día
+buena noche;Buena noche
+buena tarde;Buena tarde
+ciencias sociales;Ciencias sociales
+como estan;Cómo están
+escritura publica;Escritura pública
+hasta luego;Hasta luego
+medida cautelar;Medida cautelar
+notificacion por estado;Notificación por estado
+perro caliente;Perro caliente
+persona natural;Persona natural
+presion arterial;Presion arterial
+pruebas judiciales;Pruebas judiciales
+tenis de mesa;Tenis de mesa
+tomate de arbol;Tomate de árbol
+trabajo en grupo;Trabajo en grupo

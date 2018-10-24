@@ -14,8 +14,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 import app.rrg.pocket.com.tesis.Entities.Palabra;
@@ -39,6 +44,7 @@ public class FinalNivel2 extends AppCompatActivity implements TextToSpeech.OnIni
     private SpeechRecognizer recognizer;
     String text;
     boolean acierto;
+    List<String> listado;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -54,6 +60,11 @@ public class FinalNivel2 extends AppCompatActivity implements TextToSpeech.OnIni
         usuario = db.buscarUsuarios(1);
         palabra = dbP.buscarPalabra(Integer.parseInt(idPalabra));
         acierto=false;
+        try {
+            listar();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }        
 
         setContentView(R.layout.activity_finalnivel2);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
@@ -255,99 +266,33 @@ public class FinalNivel2 extends AppCompatActivity implements TextToSpeech.OnIni
         resetRecognizer();
     }
 
+    public void listar()throws IOException {
+        listado = new ArrayList<String>();
+        String linea;
+
+        InputStream is = this.getResources().openRawResource(R.raw.nivel2);
+        BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+
+        if(is!=null){
+            while ((linea = reader.readLine()) != null){
+                listado.add(linea);
+            }
+        }
+        is.close();
+    }
+
     @Override
     public void onResult(Hypothesis hypothesis) {
         if(text != null){
-            switch (palabra.getNombre()) {
-                case "Estadistica":
-                    if(text.contains("estadistica"))
-                        acierto=true;
-                    break;
-                case "Caricatura":
-                    if(text.contains("caricatura"))
-                        acierto=true;
-                    break;
-                case "Aguamarina":
-                    if(text.contains("aguamarina"))
-                        acierto=true;
-                    break;
-                case "Comunicación":
-                    if(text.contains("comunicacion"))
-                        acierto=true;
-                    break;
-                case "Contaduría":
-                    if(text.contains("contaduria"))
-                        acierto=true;
-                    break;
-                case "Musculatura":
-                    if(text.contains("musculatura"))
-                        acierto=true;
-                    break;
-                case "Creatividad":
-                    if(text.contains("creatividad"))
-                        acierto=true;
-                    break;
-                case "Calificación":
-                    if(text.contains("calificacion"))
-                        acierto=true;
-                    break;
-                case "Aprendizaje":
-                    if(text.contains("aprendizaje"))
-                        acierto=true;
-                    break;
-                case "Matemática":
-                    if(text.contains("matematica"))
-                        acierto=true;
-                    break;
-                case "Economía":
-                    if(text.contains("economia"))
-                        acierto=true;
-                    break;
-                case "Aspiradora":
-                    if(text.contains("aspiradora"))
-                        acierto=true;
-                    break;
-                case "Investigación":
-                    if(text.contains("investigacion"))
-                        acierto=true;
-                    break;
-                case "Experimento":
-                    if(text.contains("experimento"))
-                        acierto=true;
-                    break;
-                case "Probabilidad":
-                    if(text.contains("probabilidad"))
-                        acierto=true;
-                    break;
-                case "Ingeniería":
-                    if(text.contains("ingenieria"))
-                        acierto=true;
-                    break;
-                case "Radiografía":
-                    if(text.contains("radiografia"))
-                        acierto=true;
-                    break;
-                case "Ecografía":
-                    if(text.contains("ecografia"))
-                        acierto=true;
-                    break;
-                case "Articulaciones":
-                    if(text.contains("articulaciones"))
-                        acierto=true;
-                    break;
-                case "Aborrajado":
-                    if(text.contains("aborrajado"))
-                        acierto=true;
-                    break;
-                case "Universidad":
-                    if(text.contains("universidad"))
-                        acierto=true;
-                    break;
+            for(int i=0;i<listado.size();i++){
+                if(palabra.getNombre().equals(listado.get(i).split(";")[1])) {
+                    if (text.contains(listado.get(i).split(";")[0]))
+                        acierto = true;
+                }
             }
         }else {
-            acierto=false;
+            acierto = false;
         }
-        text=null;
 
         TextView textView = (TextView) findViewById(R.id.textView_escuchaN2);
         if(acierto){
@@ -356,6 +301,8 @@ public class FinalNivel2 extends AppCompatActivity implements TextToSpeech.OnIni
         }else{
             textView.setText("Lo lamento, no entiendo.");
         }
+        text=null;
+        acierto=false;
     }
 
     @Override

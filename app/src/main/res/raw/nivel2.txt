@@ -1,0 +1,16 @@
+aprendizaje;Aprendizaje
+calificacion;Calificación
+capacitacion;Capacitación
+comunicacion;Comunicación
+contaduria;Contaduría
+economia;Economía
+estadistica;Estadística
+experimento;Experimento
+ingenieria;Ingeniería
+investigacion;Investigación
+matematica;Matem+atica
+olimpico;Olímpico
+operativo;Operativo
+problematica;Problemática
+procedimiento;Procedimiento
+universidad;Universidad

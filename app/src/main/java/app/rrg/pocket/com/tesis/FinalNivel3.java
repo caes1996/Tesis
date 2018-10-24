@@ -17,8 +17,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 import app.rrg.pocket.com.tesis.Entities.Palabra;
@@ -42,6 +47,7 @@ public class FinalNivel3 extends AppCompatActivity implements TextToSpeech.OnIni
     private SpeechRecognizer recognizer;
     String text;
     boolean acierto;
+    List<String> listado;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -54,6 +60,11 @@ public class FinalNivel3 extends AppCompatActivity implements TextToSpeech.OnIni
         dbP = new PalabraDB(FinalNivel3.this);
         db = new UsuarioDB(FinalNivel3.this);
         acierto=false;
+        try {
+            listar();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         usuario = db.buscarUsuarios(1);
         palabra = dbP.buscarPalabra(Integer.parseInt(idPalabra));
@@ -217,59 +228,43 @@ public class FinalNivel3 extends AppCompatActivity implements TextToSpeech.OnIni
         resetRecognizer();
     }
 
+    public void listar()throws IOException {
+        listado = new ArrayList<String>();
+        String linea;
+
+        InputStream is = this.getResources().openRawResource(R.raw.nivel3);
+        BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+
+        if(is!=null){
+            while ((linea = reader.readLine()) != null){
+                listado.add(linea);
+            }
+        }
+        is.close();
+    }
+
     @Override
     public void onResult(Hypothesis hypothesis) {
         if(text != null){
-            switch (palabra.getNombre()) {
-                case "Trabajo en grupo":
-                    if(text.contains("trabajo en grupo"))
-                        acierto=true;
-                    break;
-                case "Perro caliente":
-                    if(text.contains("perro caliente"))
-                        acierto=true;
-                    break;
-                case "Tenis de mesa":
-                    if(text.contains("tenis de mesa"))
-                        acierto=true;
-                    break;
-                case "Ciencias sociales":
-                    if(text.contains("ciencias sociales"))
-                        acierto=true;
-                    break;
-                case "Tomate de árbol":
-                    if(text.contains("tomate de arbol"))
-                        acierto=true;
-                    break;
-                case "Hilo dental":
-                    if(text.contains("hilo dental"))
-                        acierto=true;
-                    break;
-                case "Crema dental":
-                    if(text.contains("crema dental"))
-                        acierto=true;
-                    break;
-                case "Arroz con pollo":
-                    if(text.contains("arroz con pollo"))
-                        acierto=true;
-                    break;
-                case "Bandeja paisa":
-                    if(text.contains("bandeja paisa"))
-                        acierto=true;
-                    break;
+            for(int i=0;i<listado.size();i++){
+                if(palabra.getNombre().equals(listado.get(i).split(";")[1])) {
+                    if (text.contains(listado.get(i).split(";")[0]))
+                        acierto = true;
+                }
             }
         }else {
             acierto=false;
         }
-        text=null;
 
         TextView textView = (TextView) findViewById(R.id.textView_escuchaN3);
         if(acierto){
-            textView.setText("Dijiste la palabra!!");
+            textView.setText("Dijiste la palabra");
             palabraReconocida();
         }else{
             textView.setText("Lo lamento, no entiendo.");
-        }        
+        }
+        text=null;
+        acierto=false;
     }
 
     @Override

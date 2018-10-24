@@ -285,7 +285,7 @@ public class FinalNivel2 extends AppCompatActivity implements TextToSpeech.OnIni
     public void onResult(Hypothesis hypothesis) {
         if(text != null){
             for(int i=0;i<listado.size();i++){
-                if(palabra.getNombre().equals(listado.get(i).split(";")[1])) {
+                if(palabra.getNombre().contains(listado.get(i).split(";")[1])) {
                     if (text.contains(listado.get(i).split(";")[0]))
                         acierto = true;
                 }

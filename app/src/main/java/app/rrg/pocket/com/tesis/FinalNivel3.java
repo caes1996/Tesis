@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -120,12 +121,24 @@ public class FinalNivel3 extends AppCompatActivity implements TextToSpeech.OnIni
         ImageView img = (ImageView) findViewById(R.id.imageViewFinalNivel3);
         textView.setText(palabra.getNombre());
 
+        TextView textViewTusPuntos = (TextView) findViewById(R.id.textViewPuntajeJugadorN3);
+        TextView textViewAGanar = (TextView) findViewById(R.id.textViewPuntosAGanarPalabraN3);
+
+        textViewTusPuntos.setText("Tienes: " + usuario.getPuntaje() +", Pts");
+        textViewAGanar.setText("Otorga: " + palabra.getPuntaje() +", Pts");
+
         if(usuario.getTamano().equals("pequeno")){
             textView.setTextSize(36);
+            textViewTusPuntos.setTextSize(22);
+            textViewAGanar.setTextSize(22);
         } else if (usuario.getTamano().equals("mediano")) {
             textView.setTextSize(40);
+            textViewTusPuntos.setTextSize(23);
+            textViewAGanar.setTextSize(23);
         }else{
             textView.setTextSize(44);
+            textViewTusPuntos.setTextSize(24);
+            textViewAGanar.setTextSize(24);
         }
 
         setImg(palabra.getNombre());
@@ -167,9 +180,10 @@ public class FinalNivel3 extends AppCompatActivity implements TextToSpeech.OnIni
                 break;
         }
 
-        img.setOnClickListener(new View.OnClickListener() {
+        Button sonido = (Button) findViewById(R.id.buttonSound3);
+        sonido.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 speakOut();
             }
         });
@@ -258,10 +272,10 @@ public class FinalNivel3 extends AppCompatActivity implements TextToSpeech.OnIni
 
         TextView textView = (TextView) findViewById(R.id.textView_escuchaN3);
         if(acierto){
-            textView.setText("Dijiste la palabra");
+            textView.setText("¡¡Dijiste la palabra!!");
             palabraReconocida();
         }else{
-            textView.setText("Lo lamento, no entiendo.");
+            textView.setText("¡Vuelve a intentarlo!");
         }
         text=null;
         acierto=false;
@@ -299,6 +313,9 @@ public class FinalNivel3 extends AppCompatActivity implements TextToSpeech.OnIni
     }
 
     public void palabraReconocida(){
-
+        TextView textViewTusPuntos = (TextView) findViewById(R.id.textViewPuntajeJugadorN3);
+        usuario.setPuntaje(palabra.getPuntaje() + usuario.getPuntaje());
+        db.updateUsuario(usuario);
+        textViewTusPuntos.setText("Tienes: " + usuario.getPuntaje() +", Pts");
     }
 }

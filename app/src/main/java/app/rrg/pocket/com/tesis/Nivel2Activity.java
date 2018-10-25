@@ -116,7 +116,7 @@ public class Nivel2Activity extends AppCompatActivity {
                 switch (categoria.getText().toString()){
                     case "Arte":
 
-                        Palabra caricatura = new Palabra("Caricatura", 0, 0, 0, tienda.getId(), categoria.getId());
+                        Palabra caricatura = new Palabra("Caricatura", 150, 50, 0, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(caricatura);
 
                         launchIntent(context, categoria.getId());
@@ -135,7 +135,7 @@ public class Nivel2Activity extends AppCompatActivity {
                         Palabra comunicacion = new Palabra("Comunicación", 150, 50, 0, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(comunicacion);
 
-                        Palabra experimento = new Palabra("Experimento", 150, 0, 0, tienda.getId(), categoria.getId());
+                        Palabra experimento = new Palabra("Experimento", 150, 50, 0, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(experimento);
 
                         Palabra probabilidad = new Palabra("Probabilidad", 150, 50, 0, tienda.getId(), categoria.getId());

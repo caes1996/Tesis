@@ -84,19 +84,29 @@ public class TabRetosFragment  extends Fragment {
 
     public void generarRetos(Nivel nivel1, Nivel nivel2, Nivel nivel3){
 
+        Log.d("TAB RETOS -> ", "ENNTRÉ A GENERAR RETOS");
+
         Random r = new Random();
 
         if(nivel2.getBloqueado() == 1){
 
             categorias = dbC.loadCategoria(nivel1.getId());
 
+            Log.d("TAB RETOS -> ", "PRIMER IF");
+
             if(categorias.size() != 0){
                 Categoria categoria = dbC.buscarCategoria(r.nextInt(categorias.size()) + 1);
 
+                Log.d("TAB RETOS -> ", "CATEGORIA: " + categoria.getNombre());
+
                 palabras = dbP.loadTotalPalabras(categoria.getId());
+
+                Log.d("TAB RETOS -> ", "TOTAL PALABRAS: " + palabras.size());
 
                 if(palabras.size() != 0){
                     int nPalabra = r.nextInt(palabras.size()) + 1;
+
+                    Log.d("TAB RETOS -> ", "NPALABRAS: " + palabras.size());
 
                     Reto reto = new Reto(1, nivel1.getNombre(), categoria.getNombre(), nPalabra, 0, 220, usuario.getId());
 
@@ -144,12 +154,17 @@ public class TabRetosFragment  extends Fragment {
 
         }else{
 
+            Log.d("TAB RETOS -> ", "ULTIMO ELSE");
+
             Nivel nivel = dbN.buscarNivelId(r.nextInt(3) + 1);
 
             categorias = dbC.loadCategoria(nivel.getId());
 
             if(categorias.size() != 0){
+
                 Categoria categoria = dbC.buscarCategoria(r.nextInt(categorias.size()) + 1);
+
+                Log.d("TAB RETOS -> ", "CATEGORIA: " + categoria.getNombre());
 
                 palabras = dbP.loadTotalPalabras(categoria.getId());
 
@@ -188,7 +203,7 @@ public class TabRetosFragment  extends Fragment {
                 }
             }
         }
-
+        Log.d("TAB RETOS -> ", "SE PUEDE AGREGAR: " + flag);
         return flag;
     }
 
@@ -205,6 +220,8 @@ public class TabRetosFragment  extends Fragment {
                 }
             }
         }
+
+        Log.d("TAB RETOS -> ", "MAS RETOS: " + flag);
 
         return flag;
     }

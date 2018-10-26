@@ -100,7 +100,7 @@ public class PalabraDB {
         ArrayList<Palabra> list = new ArrayList<>();
 
         this.openReadableDB();
-        String where = Utilidades.TIENDA_PALABRA + "= ?";
+        String where = Utilidades.CATEGORIA_PALABRA + "= ?";
         String[] campos = new String[]{Utilidades.ID_PALABRA, Utilidades.NOMBRE_PALABRA, Utilidades.COSTO_PALABRA, Utilidades.PUNTAJE_PALABRA, Utilidades.BLOQUEADO_PALABRA, Utilidades.TIENDA_PALABRA, Utilidades.CATEGORIA_PALABRA};
         Cursor c = db.query(Utilidades.TABLA_PALABRA, campos, where, new String[]{String.valueOf(id)}, null, null, null);
 

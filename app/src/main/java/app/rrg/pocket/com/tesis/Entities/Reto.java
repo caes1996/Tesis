@@ -68,7 +68,7 @@ public class Reto {
     }
 
     public void setNpalabra(int npalabra) {
-        this.npalabra = npalabra;
+        this.npalabra += npalabra;
     }
 
     public int getPuntos() {

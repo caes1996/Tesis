@@ -91,8 +91,8 @@ public class Inicio extends AppCompatActivity{
             dbV.insertVocabulario(vocabulario);
 
             Nivel nivel1 = new Nivel("Nivel 1", 0, vocabulario.getId());
-            Nivel nivel2 = new Nivel("Nivel 2", 0 , vocabulario.getId());
-            Nivel nivel3 = new Nivel("Nivel 3", 0 , vocabulario.getId());
+            Nivel nivel2 = new Nivel("Nivel 2", 0, vocabulario.getId());
+            Nivel nivel3 = new Nivel("Nivel 3", 0, vocabulario.getId());
 
             dbN.insertNivel(nivel1);
             dbN.insertNivel(nivel2);

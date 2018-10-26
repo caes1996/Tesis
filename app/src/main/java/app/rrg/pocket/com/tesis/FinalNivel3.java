@@ -27,9 +27,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+import app.rrg.pocket.com.tesis.Entities.Categoria;
 import app.rrg.pocket.com.tesis.Entities.Palabra;
+import app.rrg.pocket.com.tesis.Entities.Reto;
 import app.rrg.pocket.com.tesis.Entities.Usuario;
+import app.rrg.pocket.com.tesis.Utilidades.CategoriaDB;
 import app.rrg.pocket.com.tesis.Utilidades.PalabraDB;
+import app.rrg.pocket.com.tesis.Utilidades.RetoDB;
 import app.rrg.pocket.com.tesis.Utilidades.UsuarioDB;
 import edu.cmu.pocketsphinx.Assets;
 import edu.cmu.pocketsphinx.Hypothesis;
@@ -42,6 +46,8 @@ public class FinalNivel3 extends AppCompatActivity implements TextToSpeech.OnIni
     String idPalabra;
     private PalabraDB dbP;
     private UsuarioDB db;
+    private RetoDB dbR;
+    private CategoriaDB dbC;
     Usuario usuario;
     Palabra palabra;
     TextToSpeech tts;
@@ -60,6 +66,9 @@ public class FinalNivel3 extends AppCompatActivity implements TextToSpeech.OnIni
 
         dbP = new PalabraDB(FinalNivel3.this);
         db = new UsuarioDB(FinalNivel3.this);
+        dbR = new RetoDB(FinalNivel3.this);
+        dbC = new CategoriaDB(FinalNivel3.this);
+
         acierto=false;
         try {
             listar();
@@ -317,5 +326,27 @@ public class FinalNivel3 extends AppCompatActivity implements TextToSpeech.OnIni
         usuario.setPuntaje(palabra.getPuntaje() + usuario.getPuntaje());
         db.updateUsuario(usuario);
         textViewTusPuntos.setText("Tienes: " + usuario.getPuntaje() +", Pts");
+
+        ArrayList<Reto> retos = dbR.loadReto();
+
+        for (int i = 0; i < retos.size(); i++){
+            if(retos.get(i).getVariable() == 1){
+                Categoria categoria = dbC.buscarCategoria(palabra.getCategoria());
+                if(retos.get(i).getCategoria().equals(categoria.getNombre())){
+
+                    retos.get(i).setNpalabra(1);
+                    dbR.updateReto(retos.get(i));
+
+                    if(retos.get(i).getNpalabra() == retos.get(i).getPalabra()){
+                        usuario.setPuntaje(usuario.getPuntaje() + retos.get(i).getPuntos());
+                        db.updateUsuario(usuario);
+                        dbR.deleteReto(retos.get(i).getId());
+                        Toast.makeText(this, "¡¡Cumpliste un reto!!", Toast.LENGTH_SHORT).show();
+                        textViewTusPuntos.setText("Tienes: " + usuario.getPuntaje() +", Pts");
+                    }
+                }
+            }
+        }
+
     }
 }

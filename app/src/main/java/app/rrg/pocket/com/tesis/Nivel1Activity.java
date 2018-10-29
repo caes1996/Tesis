@@ -127,13 +127,13 @@ public class Nivel1Activity  extends AppCompatActivity {
                         Palabra civil = new Palabra("Civil", 60, 20, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(civil);
 
-                        Palabra sistema = new Palabra("Sistema", 90, 30, 0, tienda.getId(), categoria.getId());
+                        Palabra sistema = new Palabra("Sistema", 90, 30, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(sistema);
 
-                        Palabra desarrollo = new Palabra("Desarrollo", 120, 40, 0, tienda.getId(), categoria.getId());
+                        Palabra desarrollo = new Palabra("Desarrollo", 120, 40, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(desarrollo);
 
-                        Palabra problemas = new Palabra("Problemas", 90, 30, 0, tienda.getId(), categoria.getId());
+                        Palabra problemas = new Palabra("Problemas", 90, 30, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(problemas);
 
                         Palabra solucion = new Palabra("Solución", 90, 30, 0, tienda.getId(), categoria.getId());

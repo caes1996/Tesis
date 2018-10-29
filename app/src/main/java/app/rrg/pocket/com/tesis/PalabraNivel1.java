@@ -56,25 +56,27 @@ public class PalabraNivel1  extends AppCompatActivity {
         Log.d("PalabraN1Activity -> ", "tamano lista: " + list.size());
 
         for (int i = 0; i < list.size(); i++){
-            Button palabra = new Button(this);
+            if(list.get(i).getBloqueado() == 0){
+                Button palabra = new Button(this);
 
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                palabra.setBackground(this.getDrawable(R.drawable.btn_default));
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    palabra.setBackground(this.getDrawable(R.drawable.btn_default));
+                }
+
+                if(usuario.getTamano().equals("pequeno")){
+                    palabra.setTextSize(16);//pequeño 16, mediano 20, grande 24
+                }else if(usuario.getTamano().equals("mediano")){
+                    palabra.setTextSize(20);//pequeño 16, mediano 20, grande 24
+                }else{
+                    palabra.setTextSize(24);//pequeño 16, mediano 20, grande 24
+                }
+
+                palabra.setLayoutParams(lp);
+                palabra.setText(list.get(i).getNombre());
+                palabra.setId(list.get(i).getId());
+                palabra.setOnClickListener(new PalabraNivel1.ButtonsOnClickListener(this, palabra));
+                layout.addView(palabra);
             }
-
-            if(usuario.getTamano().equals("pequeno")){
-                palabra.setTextSize(16);//pequeño 16, mediano 20, grande 24
-            }else if(usuario.getTamano().equals("mediano")){
-                palabra.setTextSize(20);//pequeño 16, mediano 20, grande 24
-            }else{
-                palabra.setTextSize(24);//pequeño 16, mediano 20, grande 24
-            }
-
-            palabra.setLayoutParams(lp);
-            palabra.setText(list.get(i).getNombre());
-            palabra.setId(list.get(i).getId());
-            palabra.setOnClickListener(new PalabraNivel1.ButtonsOnClickListener(this, palabra));
-            layout.addView(palabra);
         }
 
     }

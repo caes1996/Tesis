@@ -124,6 +124,34 @@ public class PalabraDB {
         return list;
     }
 
+    public ArrayList loadTotalPalabrasTienda(int id) {
+        ArrayList<Palabra> list = new ArrayList<>();
+
+        this.openReadableDB();
+        String where = Utilidades.TIENDA_PALABRA + "= ?";
+        String[] campos = new String[]{Utilidades.ID_PALABRA, Utilidades.NOMBRE_PALABRA, Utilidades.COSTO_PALABRA, Utilidades.PUNTAJE_PALABRA, Utilidades.BLOQUEADO_PALABRA, Utilidades.TIENDA_PALABRA, Utilidades.CATEGORIA_PALABRA};
+        Cursor c = db.query(Utilidades.TABLA_PALABRA, campos, where, new String[]{String.valueOf(id)}, null, null, null);
+
+        try {
+            while (c.moveToNext()) {
+                Palabra palabra = new Palabra();
+                palabra.setId(c.getInt(0));
+                palabra.setNombre(c.getString(1));
+                palabra.setCosto(c.getInt(2));
+                palabra.setPuntaje(c.getInt(3));
+                palabra.setBloqueado(c.getInt(4));
+                palabra.setTienda(c.getInt(5));
+                palabra.setCategoria(c.getInt(6));
+                list.add(palabra);
+            }
+        } finally {
+            c.close();
+        }
+        this.closeDB();
+
+        return list;
+    }
+
     public Palabra buscarPalabra(int id) {
         Palabra palabra = new Palabra();
         this.openReadableDB();

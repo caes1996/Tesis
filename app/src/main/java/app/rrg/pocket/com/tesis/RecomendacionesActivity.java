@@ -32,7 +32,7 @@ public class RecomendacionesActivity extends AppCompatActivity {
 
         texto.setText(
                 "Esta aplicación es apta para todo público, sin embargo es de recalcar que fue desarrollada para pacientes quienes" +
-                        " son diagnosticados con una Afasia de BROCA o TRANSCORTICAL MOTORA. Por lo tanto estas personas " +
+                        " son diagnosticados con una Afasia de broca o transcortical motora. Por lo tanto estas personas " +
                         "podrán obtener mejores resultados. \n" + "\n" +
                         "Teniendo en cuenta que la aplicación es orientada a personas adultas, se tuvo que considerar la " +
                         "opción de cambiar el tamaño de la fuente, para así poder brindar una mejor experiencia visual, por " +

@@ -72,7 +72,8 @@ public class TabTiendaFragment  extends Fragment {
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.MATCH_PARENT );
 
-        ArrayList<Palabra> list = dbP.loadTotalPalabras(tienda.getId());
+        ArrayList<Palabra> list = dbP.loadTotalPalabrasTienda(tienda.getId());
+
         Log.d("TiendaActivity -> ", "tamano lista: " + list.size());
 
         if(list.size() > 0){

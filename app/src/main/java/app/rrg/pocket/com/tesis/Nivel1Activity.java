@@ -160,16 +160,16 @@ public class Nivel1Activity  extends AppCompatActivity {
                         Palabra pagina = new Palabra("Página", 90 , 30, 0, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(pagina);
 
-                        Palabra tecnico = new Palabra("Técnico", 90 , 30, 0, tienda.getId(), categoria.getId());
+                        Palabra tecnico = new Palabra("Técnico", 90 , 30, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(tecnico);
 
-                        Palabra computador = new Palabra("Computador", 120 , 40, 0, tienda.getId(), categoria.getId());
+                        Palabra computador = new Palabra("Computador", 120 , 40, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(computador);
 
-                        Palabra portatil = new Palabra("Portátil", 90 , 30, 0, tienda.getId(), categoria.getId());
+                        Palabra portatil = new Palabra("Portátil", 90 , 30, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(portatil);
 
-                        Palabra redes = new Palabra("Redes", 60 , 20, 0, tienda.getId(), categoria.getId());
+                        Palabra redes = new Palabra("Redes", 60 , 20, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(redes);
 
                         launchIntent(context, categoria.getId());
@@ -331,25 +331,25 @@ public class Nivel1Activity  extends AppCompatActivity {
                         break;
                     case "Deporte":
 
-                        Palabra sacrificio = new Palabra("Sacrificio", 120 , 40, 0, tienda.getId(), categoria.getId());
+                        Palabra sacrificio = new Palabra("Sacrificio", 120 , 40, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(sacrificio);
 
                         Palabra deporte = new Palabra("Deporte", 90 , 30, 0, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(deporte);
 
-                        Palabra dedicacion = new Palabra("Dedicación", 120 , 40, 0, tienda.getId(), categoria.getId());
+                        Palabra dedicacion = new Palabra("Dedicación", 120 , 40, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(dedicacion);
 
-                        Palabra disciplina = new Palabra("Disciplina", 120 , 40, 0, tienda.getId(), categoria.getId());
+                        Palabra disciplina = new Palabra("Disciplina", 120 , 40, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(disciplina);
 
-                        Palabra esfuerzo = new Palabra("Esfuerzo", 90 , 30, 0, tienda.getId(), categoria.getId());
+                        Palabra esfuerzo = new Palabra("Esfuerzo", 90 , 30, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(esfuerzo);
 
                         Palabra pesas = new Palabra("Pesas", 60 , 20, 0, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(pesas);
 
-                        Palabra gimnasio = new Palabra("Gimnasio", 90 , 30, 0, tienda.getId(), categoria.getId());
+                        Palabra gimnasio = new Palabra("Gimnasio", 90 , 30, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(gimnasio);
 
                         Palabra entrenar = new Palabra("Entrenar", 90 , 30, 0, tienda.getId(), categoria.getId());
@@ -358,10 +358,10 @@ public class Nivel1Activity  extends AppCompatActivity {
                         Palabra futbol = new Palabra("Fútbol", 60 , 20, 0, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(futbol);
 
-                        Palabra lateral = new Palabra("Lateral", 90 , 30, 0, tienda.getId(), categoria.getId());
+                        Palabra lateral = new Palabra("Lateral", 90 , 30, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(lateral);
 
-                        Palabra central = new Palabra("Central", 60 , 20, 0, tienda.getId(), categoria.getId());
+                        Palabra central = new Palabra("Central", 60 , 20, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(central);
 
                         Palabra volante = new Palabra("Volante", 90 , 30, 0, tienda.getId(), categoria.getId());
@@ -370,7 +370,7 @@ public class Nivel1Activity  extends AppCompatActivity {
                         Palabra delantero = new Palabra("Delantero", 120 , 40, 0, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(delantero);
 
-                        Palabra tecnicoD = new Palabra("Técnico", 90 , 30, 0, tienda.getId(), categoria.getId());
+                        Palabra tecnicoD = new Palabra("Técnico", 90 , 30, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(tecnicoD);
 
                         Palabra cuerpo = new Palabra("Cuerpo", 60 , 20, 0, tienda.getId(), categoria.getId());
@@ -379,22 +379,22 @@ public class Nivel1Activity  extends AppCompatActivity {
                         Palabra arbitro = new Palabra("Árbitro", 90 , 30, 0, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(arbitro);
 
-                        Palabra natacion = new Palabra("Natación", 90 , 30, 0, tienda.getId(), categoria.getId());
+                        Palabra natacion = new Palabra("Natación", 90 , 30, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(natacion);
 
-                        Palabra mariposa = new Palabra("Mariposa", 120, 40, 0, tienda.getId(), categoria.getId());
+                        Palabra mariposa = new Palabra("Mariposa", 120, 40, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(mariposa);
 
                         Palabra clavado = new Palabra("Clavado", 90, 30, 0, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(clavado);
 
-                        Palabra olimpico = new Palabra("Olímpico", 120, 40, 0, tienda.getId(), categoria.getId());
+                        Palabra olimpico = new Palabra("Olímpico", 120, 40, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(olimpico);
 
-                        Palabra ciclismo = new Palabra("Ciclismo", 90, 30, 0, tienda.getId(), categoria.getId());
+                        Palabra ciclismo = new Palabra("Ciclismo", 90, 30, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(ciclismo);
 
-                        Palabra patinaje = new Palabra("Patinaje", 120, 40, 0, tienda.getId(), categoria.getId());
+                        Palabra patinaje = new Palabra("Patinaje", 120, 40, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(patinaje);
 
                         Palabra carrera = new Palabra("Carrera", 90, 30, 0, tienda.getId(), categoria.getId());
@@ -412,10 +412,10 @@ public class Nivel1Activity  extends AppCompatActivity {
                         Palabra pasion = new Palabra("Pasión", 60, 20, 0, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(pasion);
 
-                        Palabra deportista = new Palabra("Deportista", 120 , 40, 0, tienda.getId(), categoria.getId());
+                        Palabra deportista = new Palabra("Deportista", 120 , 40, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(deportista);
 
-                        Palabra motivacion = new Palabra("Motivación", 120, 40, 0, tienda.getId(), categoria.getId());
+                        Palabra motivacion = new Palabra("Motivación", 120, 40, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(motivacion);
 
                         launchIntent(context, categoria.getId());
@@ -440,7 +440,7 @@ public class Nivel1Activity  extends AppCompatActivity {
                         break;
                     case "Medicina":
 
-                        Palabra fractura = new Palabra("Fractura", 90, 30, 0, tienda.getId(), categoria.getId());
+                        Palabra fractura = new Palabra("Fractura", 90, 30, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(fractura);
 
                         Palabra huesos = new Palabra("Huesos", 60, 20, 0, tienda.getId(), categoria.getId());
@@ -455,7 +455,7 @@ public class Nivel1Activity  extends AppCompatActivity {
                         Palabra musculo = new Palabra("Músculo", 90, 30, 0, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(musculo);
 
-                        Palabra sutura = new Palabra("Sutura", 90, 30, 0, tienda.getId(), categoria.getId());
+                        Palabra sutura = new Palabra("Sutura", 90, 30, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(sutura);
 
                         Palabra tijeras = new Palabra("Tijeras", 90, 30, 0, tienda.getId(), categoria.getId());
@@ -467,16 +467,16 @@ public class Nivel1Activity  extends AppCompatActivity {
                         Palabra sonda = new Palabra("Sonda", 60, 20, 0, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(sonda);
 
-                        Palabra defensas = new Palabra("Defensas", 90, 30, 0, tienda.getId(), categoria.getId());
+                        Palabra defensas = new Palabra("Defensas", 90, 30, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(defensas);
 
-                        Palabra muestra = new Palabra("Muestra", 60, 20, 0, tienda.getId(), categoria.getId());
+                        Palabra muestra = new Palabra("Muestra", 60, 20, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(muestra);
 
                         Palabra virus = new Palabra("Virus", 60, 20, 0, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(virus);
 
-                        Palabra hongos = new Palabra("Hongos", 60, 20, 0, tienda.getId(), categoria.getId());
+                        Palabra hongos = new Palabra("Hongos", 60, 20, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(hongos);
 
                         Palabra embarazo = new Palabra("Embarazo", 120, 40, 0, tienda.getId(), categoria.getId());
@@ -784,7 +784,7 @@ public class Nivel1Activity  extends AppCompatActivity {
                         break;
                     case "Contaduría":
 
-                        Palabra balance = new Palabra("Balance", 90, 30, 0, tienda.getId(), categoria.getId());
+                        Palabra balance = new Palabra("Balance", 90, 30, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(balance);
 
                         Palabra costo = new Palabra("Costo", 60, 20, 0, tienda.getId(), categoria.getId());
@@ -796,13 +796,13 @@ public class Nivel1Activity  extends AppCompatActivity {
                         Palabra iva = new Palabra("Iva", 60, 20, 0, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(iva);
 
-                        Palabra factura = new Palabra("Factura", 90, 30, 0, tienda.getId(), categoria.getId());
+                        Palabra factura = new Palabra("Factura", 90, 30, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(factura);
 
                         Palabra norma = new Palabra("Norma", 60, 20, 0, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(norma);
 
-                        Palabra impuesto = new Palabra("Impuesto", 90, 30, 0, tienda.getId(), categoria.getId());
+                        Palabra impuesto = new Palabra("Impuesto", 90, 30, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(impuesto);
 
                         Palabra caja = new Palabra("Caja", 60, 20, 0, tienda.getId(), categoria.getId());
@@ -814,7 +814,7 @@ public class Nivel1Activity  extends AppCompatActivity {
                         Palabra saldos = new Palabra("Saldos", 60, 20, 0, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(saldos);
 
-                        Palabra informacion = new Palabra("Información", 120, 40, 0, tienda.getId(), categoria.getId());
+                        Palabra informacion = new Palabra("Información", 120, 40, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(informacion);
 
                         Palabra inventario = new Palabra("Inventario", 120, 40, 0, tienda.getId(), categoria.getId());
@@ -832,7 +832,7 @@ public class Nivel1Activity  extends AppCompatActivity {
                         Palabra utilidad = new Palabra("Utilidad", 120, 40, 0, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(utilidad);
 
-                        Palabra perdida = new Palabra("Pérdida", 90, 30, 0, tienda.getId(), categoria.getId());
+                        Palabra perdida = new Palabra("Pérdida", 90, 30, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(perdida);
 
                         Palabra agenda = new Palabra("Agenda", 90, 30, 0, tienda.getId(), categoria.getId());
@@ -841,7 +841,7 @@ public class Nivel1Activity  extends AppCompatActivity {
                         Palabra contador = new Palabra("Contador", 90, 30, 0, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(contador);
 
-                        Palabra auxiliar = new Palabra("Auxiliar", 90, 30, 0, tienda.getId(), categoria.getId());
+                        Palabra auxiliar = new Palabra("Auxiliar", 90, 30, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(auxiliar);
 
                         Palabra contable = new Palabra("Contable", 90, 30, 0, tienda.getId(), categoria.getId());
@@ -855,13 +855,13 @@ public class Nivel1Activity  extends AppCompatActivity {
                         Palabra ahorro = new Palabra("Ahorro", 90, 30, 0, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(ahorro);
 
-                        Palabra alquiler = new Palabra("Alquiler", 90, 30, 0, tienda.getId(), categoria.getId());
+                        Palabra alquiler = new Palabra("Alquiler", 90, 30, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(alquiler);
 
                         Palabra balanza = new Palabra("Balanza", 90, 30, 0, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(balanza);
 
-                        Palabra beneficio = new Palabra("Beneficio", 120, 40, 0, tienda.getId(), categoria.getId());
+                        Palabra beneficio = new Palabra("Beneficio", 120, 40, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(beneficio);
 
                         Palabra bolsa = new Palabra("Bolsa", 60, 20, 0, tienda.getId(), categoria.getId());
@@ -873,13 +873,13 @@ public class Nivel1Activity  extends AppCompatActivity {
                         Palabra capital = new Palabra("Capital", 90, 30, 0, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(capital);
 
-                        Palabra competencia = new Palabra("Competencia", 120, 40, 0, tienda.getId(), categoria.getId());
+                        Palabra competencia = new Palabra("Competencia", 120, 40, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(competencia);
 
                         Palabra consumo = new Palabra("Consumo", 90, 30, 0, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(consumo);
 
-                        Palabra descuento = new Palabra("Descuento", 90, 30, 0, tienda.getId(), categoria.getId());
+                        Palabra descuento = new Palabra("Descuento", 90, 30, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(descuento);
 
                         Palabra estado = new Palabra("Estado", 90, 30, 0, tienda.getId(), categoria.getId());
@@ -891,7 +891,7 @@ public class Nivel1Activity  extends AppCompatActivity {
                         Palabra interes = new Palabra("Interés", 90, 30, 0, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(interes);
 
-                        Palabra mercado = new Palabra("Mercado", 90, 30, 0, tienda.getId(), categoria.getId());
+                        Palabra mercado = new Palabra("Mercado", 90, 30, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(mercado);
 
                         Palabra moneda = new Palabra("Moneda", 90, 30, 0, tienda.getId(), categoria.getId());
@@ -903,7 +903,7 @@ public class Nivel1Activity  extends AppCompatActivity {
                         Palabra demanda = new Palabra("Demanda", 90, 30, 0, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(demanda);
 
-                        Palabra poblacion = new Palabra("Población", 90, 30, 0, tienda.getId(), categoria.getId());
+                        Palabra poblacion = new Palabra("Población", 90, 30, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(poblacion);
 
                         Palabra pobreza = new Palabra("Pobreza", 90, 30, 0, tienda.getId(), categoria.getId());
@@ -1002,7 +1002,7 @@ public class Nivel1Activity  extends AppCompatActivity {
                         Palabra marca = new Palabra("Marca", 60, 20, 0, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(marca);
 
-                        Palabra publicidad = new Palabra("Publicidad", 120, 40, 0, tienda.getId(), categoria.getId());
+                        Palabra publicidad = new Palabra("Publicidad", 120, 40, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(publicidad);
 
                         Palabra tinta = new Palabra("Tinta", 60, 20, 0, tienda.getId(), categoria.getId());
@@ -1014,7 +1014,7 @@ public class Nivel1Activity  extends AppCompatActivity {
                         Palabra sombra = new Palabra("Sombra", 60, 20, 0, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(sombra);
 
-                        Palabra textura = new Palabra("Textura", 90, 30, 0, tienda.getId(), categoria.getId());
+                        Palabra textura = new Palabra("Textura", 90, 30, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(textura);
 
                         launchIntent(context, categoria.getId());
@@ -1120,7 +1120,7 @@ public class Nivel1Activity  extends AppCompatActivity {
                         break;
                     case "Policía":
 
-                        Palabra arma = new Palabra("Arma", 60, 20, 0, tienda.getId(), categoria.getId());
+                        Palabra arma = new Palabra("Arma", 60, 20, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(arma);
 
                         Palabra uniforme = new Palabra("Uniforme", 120, 40, 0, tienda.getId(), categoria.getId());
@@ -1135,13 +1135,13 @@ public class Nivel1Activity  extends AppCompatActivity {
                         Palabra coronel = new Palabra("Coronel", 90, 30, 0, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(coronel);
 
-                        Palabra comandante = new Palabra("Comandante", 120, 40, 0, tienda.getId(), categoria.getId());
+                        Palabra comandante = new Palabra("Comandante", 120, 40, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(comandante);
 
-                        Palabra sargento = new Palabra("Sargento", 90, 30, 0, tienda.getId(), categoria.getId());
+                        Palabra sargento = new Palabra("Sargento", 90, 30, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(sargento);
 
-                        Palabra captura = new Palabra("Captura", 90, 30, 0, tienda.getId(), categoria.getId());
+                        Palabra captura = new Palabra("Captura", 90, 30, 1, tienda.getId(), categoria.getId());
                         dbP.insertPalabra(captura);
 
                         Palabra riesgo = new Palabra("Riesgo", 60, 20, 0, tienda.getId(), categoria.getId());

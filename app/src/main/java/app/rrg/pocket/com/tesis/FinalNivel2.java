@@ -25,10 +25,12 @@ import java.util.List;
 import java.util.Locale;
 
 import app.rrg.pocket.com.tesis.Entities.Categoria;
+import app.rrg.pocket.com.tesis.Entities.Nivel;
 import app.rrg.pocket.com.tesis.Entities.Palabra;
 import app.rrg.pocket.com.tesis.Entities.Reto;
 import app.rrg.pocket.com.tesis.Entities.Usuario;
 import app.rrg.pocket.com.tesis.Utilidades.CategoriaDB;
+import app.rrg.pocket.com.tesis.Utilidades.NivelDB;
 import app.rrg.pocket.com.tesis.Utilidades.PalabraDB;
 import app.rrg.pocket.com.tesis.Utilidades.RetoDB;
 import app.rrg.pocket.com.tesis.Utilidades.UsuarioDB;
@@ -45,6 +47,7 @@ public class FinalNivel2 extends AppCompatActivity implements TextToSpeech.OnIni
     private UsuarioDB db;
     private RetoDB dbR;
     private CategoriaDB dbC;
+    private NivelDB dbN;
     Usuario usuario;
     Palabra palabra;
     TextToSpeech tts;
@@ -65,6 +68,7 @@ public class FinalNivel2 extends AppCompatActivity implements TextToSpeech.OnIni
         db = new UsuarioDB(FinalNivel2.this);
         dbR = new RetoDB(FinalNivel2.this);
         dbC = new CategoriaDB(FinalNivel2.this);
+        dbN = new NivelDB(FinalNivel2.this);
 
         usuario = db.buscarUsuarios(1);
         palabra = dbP.buscarPalabra(Integer.parseInt(idPalabra));
@@ -383,6 +387,13 @@ public class FinalNivel2 extends AppCompatActivity implements TextToSpeech.OnIni
                     }
                 }
             }
+        }
+
+        if(usuario.getPuntaje() >= 1000){
+            Nivel nivel = dbN.buscarNivel("Nivel 3");
+            nivel.setBloqueado(0);
+            dbN.updateNivel(nivel);
+            Toast.makeText(this, "¡Nivel 3 desbloqueado!", Toast.LENGTH_SHORT).show();
         }
 
     }

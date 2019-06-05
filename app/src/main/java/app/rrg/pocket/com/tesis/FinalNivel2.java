@@ -389,11 +389,13 @@ public class FinalNivel2 extends AppCompatActivity implements TextToSpeech.OnIni
             }
         }
 
-        if(usuario.getPuntaje() >= 1000){
+        if(usuario.getPuntaje() >= 2000){
             Nivel nivel = dbN.buscarNivel("Nivel 3");
+            if(nivel.getBloqueado() == 1){
+                Toast.makeText(this, "¡Nivel 3 desbloqueado!", Toast.LENGTH_SHORT).show();
+            }
             nivel.setBloqueado(0);
             dbN.updateNivel(nivel);
-            Toast.makeText(this, "¡Nivel 3 desbloqueado!", Toast.LENGTH_SHORT).show();
         }
 
     }
